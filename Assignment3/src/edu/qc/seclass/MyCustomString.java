@@ -158,14 +158,17 @@ class MyCustomString implements MyCustomStringInterface {
             for (int i = 0; i < len; i++) {
                 array[i] = Character.toString(phrase.charAt(i));  //get char as string and save it to the array
             }
+            //get all the characters between startPosition and endPosition, call name function to compare which digit
+            //can be replaced to a word, story them in an array.
             for (int j = startPosition - 1; j < endPosition; j++) {
                 array[j] = name(array[j]);
             }
+            //get array of replaced words from startPosition to endPosition and store them to names
             String names = "";
             for (int i = 0; i < len; i++) {
                 names += array[i];
             }
-            string = names;
+            string = names;  //use names values and put them in the original string.
         }
     }
 
