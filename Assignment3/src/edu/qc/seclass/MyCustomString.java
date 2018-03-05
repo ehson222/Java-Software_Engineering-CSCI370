@@ -37,6 +37,7 @@ class MyCustomString implements MyCustomStringInterface {
      * @return Number of numbers in the current string
      * @throws NullPointerException If the current string is null
      */
+    //taken from https://stackoverflow.com/questions/39823137/java-count-the-number-of-integers-in-a-string
     @Override
     public int countNumbers() throws NullPointerException{
         int count = 0;
