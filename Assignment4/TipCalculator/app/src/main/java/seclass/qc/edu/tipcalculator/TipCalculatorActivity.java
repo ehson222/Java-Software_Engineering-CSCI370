@@ -82,6 +82,7 @@ public class TipCalculatorActivity extends AppCompatActivity {
         });
     }
 
+    //method to display toast 
     public void displayToast(){
 
         Toast.makeText(this, "Incorrect Values!", Toast.LENGTH_LONG).show();
