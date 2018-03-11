@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class TipCalculatorActivity extends AppCompatActivity {
 
@@ -82,6 +83,8 @@ public class TipCalculatorActivity extends AppCompatActivity {
     }
 
     public void displayToast(){
+
+        Toast.makeText(this, "Incorrect Values!", Toast.LENGTH_LONG).show();
 
     }
 }
