@@ -6,4 +6,6 @@
 
 **User_Grocery_List** categorizes all of the said user’s grocery list and its description.  The method *display_category()* will show all the list.  User should also be able to delete a list and add a new list with the use of this class.
 
-Clicking on a **User_Grocery_list** will call the Grocery_List_Items.  The class lists specific items, quantity of the user’s grocery list.  Methods like *check_list(), unCheck_list()* give enables the activity to have uncheck on check in a UI.  User should be able to update item quantity, delete items and add items in the specific list.  
+Clicking on a **User_Grocery_list** will call the Grocery_List_Items.  The class lists specific items, quantity of the user’s grocery list.  Methods like *check_list(), unCheck_list()* give enables the activity to have uncheck on check in a UI.  User should be able to update item quantity, delete items and add items in the specific list.
+
+[UML Diagram of Assignment 5](https://github.com/qc-se-spring2018/370Spring18jrtapang/blob/master/Assignment5/design.pdf)
