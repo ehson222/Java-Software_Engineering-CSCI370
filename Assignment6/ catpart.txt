@@ -1,0 +1,17 @@
+#File
+Size_of_File_One:
+    Empty.                            [single][property emptyFileOne]
+    Not empty.
+
+Size_of_File_Two:
+    Empty.                            [single][property emptyFileTwo]
+    Not empty.            
+
+Number of matches of the first pattern in file:
+    None.                               [if !emptyFile][property noMatch]
+    One.                                [if !emptyFile]
+    Many.                               [if !emptyFile]
+
+Number of matches of the pattern in one line:
+    One.                                [if !noMatch && !emptyFile]
+    Many.                               [if !noNatch && !emptyFile]
