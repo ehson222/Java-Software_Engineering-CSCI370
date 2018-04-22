@@ -1,17 +1,24 @@
 #File
-Size_of_File_One:
-    Empty.                            [single][property emptyFileOne]
-    Not empty.
+File One:
+  Empty.                            [single][property emptyFileOne]
+  Not empty.
+  File not found.                   [error]
 
-Size_of_File_Two:
-    Empty.                            [single][property emptyFileTwo]
-    Not empty.            
+File Two:
+  Empty.                            [single][property emptyFileTwo]
+  Not empty.
+  File not found.                   [error]
 
-Number of matches of the first pattern in file:
-    None.                               [if !emptyFile][property noMatch]
-    One.                                [if !emptyFile]
-    Many.                               [if !emptyFile]
+#Check match
+Number of matches of the first pattern in second file:
+  None.                               [if !emptyFile][property noMatch]
+  One.                                [if !emptyFile]
+  Many.                               [if !emptyFile]
 
 Number of matches of the pattern in one line:
-    One.                                [if !noMatch && !emptyFile]
-    Many.                               [if !noNatch && !emptyFile]
+  One.                                [if !noMatch && !emptyFile]
+  Many.                               [if !noNatch && !emptyFile]
+
+#Replace
+Replace Value:
+  None
