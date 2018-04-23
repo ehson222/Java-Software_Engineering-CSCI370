@@ -11,27 +11,35 @@ File Two:
 
 #Parameter String 1:
   length0.                          [single][property stringEmpty]
-  length1.                          [property isChar]
-  lengthX.                          [property isString]
-  lengthNeg.
+  length1.                          [property isShortString]
+  lengthX.                          [property isLongString]
+  lengthNeg.                        [error]
+  upper case.                       [single][property isUpperCase]
+  lower case.                       [single][property isLowerCase]
 
 # Parameter String 2:
   length0.
   length1.
   lengthX.
-  lengthNeg.
+  lengthNeg.                        [error]
+  upper case.
+  lower case.
 
 # Check match
 Number of matches of the pattern in second file:
   None.                               [if !emptyFile][property noMatch]
-  One.                                [if !emptyFile && isChar]
-  Many.                               [if !emptyFile && isString]
+  One.                                [if !emptyFile && isShortString]
+  Many.                               [if !emptyFile && isLongString]
 
-Number of matches of the pattern in one line:
+Number of matches lower case and upper case:
+  None.                               [if !emptyFile]
   One.                                [if !noMatch && !emptyFile]
   Many.                               [if !noMatch && !emptyFile]
 
+
 # Replace
 Replace Value:
-  Replace a char.                     [if !emptyFile && isChar || isString][property replaceChar]
-  Replace a string.                   [if !emptyFile && isChar || isString][property replaceString]
+  Replace a shortString.               [if !emptyFile && isShortString][property replaceIsShortString]
+  Replace a longString.                [if !emptyFile && isLongString][property replaceIsLongString]
+  Replace to a lowerCase.              [if !emptyFile && isUpperCase]
+  Replace to upperCase.                [if !emptyFile && isLowerCase]
