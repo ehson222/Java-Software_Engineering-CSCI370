@@ -10,7 +10,7 @@ File Two:
   File not found.                   [error]
 
 #Check match
-Number of matches of the first pattern in second file:
+Number of matches of the pattern in second file:
   None.                               [if !emptyFile][property noMatch]
   One.                                [if !emptyFile]
   Many.                               [if !emptyFile]
@@ -21,4 +21,5 @@ Number of matches of the pattern in one line:
 
 #Replace
 Replace Value:
-  None
+  Replace a char.                     [if !emptyFile][property replaceChar]
+  Replace a string.                   [if !emptyFile][property replaceString]
