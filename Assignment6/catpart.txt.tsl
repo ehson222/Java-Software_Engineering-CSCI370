@@ -15,82 +15,134 @@ Test Case 4  		<error>
    File Two :  File not found
 
 
-Test Case 5  		(Key = 2.2.1.0.1.)
+Test Case 5  		<single>
+   File Two :  length0
+
+
+Test Case 6  		(Key = 2.2.1.0.0.)
    File One                                        :  Not empty
    File Two                                        :  Not empty
+   Number of matches of the pattern in second file :  None
+   Number of matches of the pattern in one line    :  <n/a>
+   Replace Value                                   :  <n/a>
+
+
+Test Case 7  		(Key = 2.5.1.0.1.)
+   File One                                        :  Not empty
+   File Two                                        :  length1
    Number of matches of the pattern in second file :  None
    Number of matches of the pattern in one line    :  <n/a>
    Replace Value                                   :  Replace a char
 
 
-Test Case 6  		(Key = 2.2.1.0.2.)
+Test Case 8  		(Key = 2.5.1.0.2.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  length1
    Number of matches of the pattern in second file :  None
    Number of matches of the pattern in one line    :  <n/a>
    Replace Value                                   :  Replace a string
 
 
-Test Case 7  		(Key = 2.2.2.1.1.)
+Test Case 9  		(Key = 2.5.2.1.1.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  length1
    Number of matches of the pattern in second file :  One
    Number of matches of the pattern in one line    :  One
    Replace Value                                   :  Replace a char
 
 
-Test Case 8  		(Key = 2.2.2.1.2.)
+Test Case 10 		(Key = 2.5.2.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  length1
    Number of matches of the pattern in second file :  One
    Number of matches of the pattern in one line    :  One
    Replace Value                                   :  Replace a string
 
 
-Test Case 9  		(Key = 2.2.2.2.1.)
+Test Case 11 		(Key = 2.5.2.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  length1
    Number of matches of the pattern in second file :  One
    Number of matches of the pattern in one line    :  Many
    Replace Value                                   :  Replace a char
 
 
-Test Case 10 		(Key = 2.2.2.2.2.)
+Test Case 12 		(Key = 2.5.2.2.2.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  length1
    Number of matches of the pattern in second file :  One
    Number of matches of the pattern in one line    :  Many
    Replace Value                                   :  Replace a string
 
 
-Test Case 11 		(Key = 2.2.3.1.1.)
+Test Case 13 		(Key = 2.6.1.0.1.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  lengthX
+   Number of matches of the pattern in second file :  None
+   Number of matches of the pattern in one line    :  <n/a>
+   Replace Value                                   :  Replace a char
+
+
+Test Case 14 		(Key = 2.6.1.0.2.)
+   File One                                        :  Not empty
+   File Two                                        :  lengthX
+   Number of matches of the pattern in second file :  None
+   Number of matches of the pattern in one line    :  <n/a>
+   Replace Value                                   :  Replace a string
+
+
+Test Case 15 		(Key = 2.6.3.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  lengthX
    Number of matches of the pattern in second file :  Many
    Number of matches of the pattern in one line    :  One
    Replace Value                                   :  Replace a char
 
 
-Test Case 12 		(Key = 2.2.3.1.2.)
+Test Case 16 		(Key = 2.6.3.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  lengthX
    Number of matches of the pattern in second file :  Many
    Number of matches of the pattern in one line    :  One
    Replace Value                                   :  Replace a string
 
 
-Test Case 13 		(Key = 2.2.3.2.1.)
+Test Case 17 		(Key = 2.6.3.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  lengthX
    Number of matches of the pattern in second file :  Many
    Number of matches of the pattern in one line    :  Many
    Replace Value                                   :  Replace a char
 
 
-Test Case 14 		(Key = 2.2.3.2.2.)
+Test Case 18 		(Key = 2.6.3.2.2.)
    File One                                        :  Not empty
-   File Two                                        :  Not empty
+   File Two                                        :  lengthX
    Number of matches of the pattern in second file :  Many
    Number of matches of the pattern in one line    :  Many
    Replace Value                                   :  Replace a string
+
+
+Test Case 19 		(Key = 2.7.1.0.0.)
+   File One                                        :  Not empty
+   File Two                                        :  length0
+   Number of matches of the pattern in second file :  None
+   Number of matches of the pattern in one line    :  <n/a>
+   Replace Value                                   :  <n/a>
+
+
+Test Case 20 		(Key = 2.8.1.0.0.)
+   File One                                        :  Not empty
+   File Two                                        :  length1
+   Number of matches of the pattern in second file :  None
+   Number of matches of the pattern in one line    :  <n/a>
+   Replace Value                                   :  <n/a>
+
+
+Test Case 21 		(Key = 2.9.1.0.0.)
+   File One                                        :  Not empty
+   File Two                                        :  lengthX
+   Number of matches of the pattern in second file :  None
+   Number of matches of the pattern in one line    :  <n/a>
+   Replace Value                                   :  <n/a>
 
