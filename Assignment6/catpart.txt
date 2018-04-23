@@ -47,7 +47,7 @@ Parameter to:
 
 
 
-# MAY NEED
+# MAY NEED OLD CODE
 # Replace
 #Replace Value:
 #  Replace a shortString.               [if !emptyFile && isShortString]
