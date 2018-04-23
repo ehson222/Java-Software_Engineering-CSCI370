@@ -1,7 +1,7 @@
 # File
 File One:
   Empty.                            [single][property emptyFile]
-  Not empty.
+  Not empty.                        [property okFile]
   File not found.                   [error]
 
 File Two:
@@ -16,7 +16,7 @@ Options:
   -f.
   -l.
   -i.
-  wrongOpt.
+  Opt not found.                    [error]
 
 # Parameters
 Parameter from:
