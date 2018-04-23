@@ -1,11 +1,11 @@
 #File
 File One:
-  Empty.                            [single][property emptyFileOne]
+  Empty.                            [single][property emptyFile]
   Not empty.
   File not found.                   [error]
 
 File Two:
-  Empty.                            [single][property emptyFileTwo]
+  Empty.                            [single][property emptyFile]
   Not empty.
   File not found.                   [error]
 
@@ -17,7 +17,7 @@ Number of matches of the pattern in second file:
 
 Number of matches of the pattern in one line:
   One.                                [if !noMatch && !emptyFile]
-  Many.                               [if !noNatch && !emptyFile]
+  Many.                               [if !noMatch && !emptyFile]
 
 #Replace
 Replace Value:
