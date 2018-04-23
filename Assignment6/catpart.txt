@@ -11,11 +11,10 @@ File Two:
 
 #OPT
 Options:
-  none.
-  -b.
-  -f.
-  -l.
-  -i.
+  -b.                               [property backUp]
+  -f.                               [property replaceFrom]
+  -l.                               [property replaceTo]
+  -i.                               [property propertyInsensitive]
   Opt not found.                    [error]
 
 # Parameters
@@ -41,14 +40,21 @@ Parameter to:
     Many.                               [if !emptyFile && isLongString]
   # Replace
   Replace Value:
-    Replace a shortString.               [if !emptyFile && isShortString]
-    Replace a longString.                [if !emptyFile && isLongString]
-    Replace to a lowerCase.              [if !emptyFile && isUpperCase]
-    Replace to upperCase.                [if !emptyFile && isLowerCase]
+    Replace with backUp.                [if !emptyFile && backUp]
+    Replace replaceFrom.                [if !emptyFile && replaceFrom]
+    Replace replaceTo.                  [if !emptyFile && replaceTo]
+    Replace sensitiveCase.              [if !emptyFile && propertyInsensitive]
 
 
 
 # MAY NEED
+# Replace
+#Replace Value:
+#  Replace a shortString.               [if !emptyFile && isShortString]
+#  Replace a longString.                [if !emptyFile && isLongString]
+#  Replace to a lowerCase.              [if !emptyFile && isUpperCase]
+#  Replace to upperCase.                [if !emptyFile && isLowerCase]
+
 #Parameter String 1:
 #  length0.                          [single][property stringEmpty]
 #  length1.                          [property isShortString]
