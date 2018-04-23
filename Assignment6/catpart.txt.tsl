@@ -16,220 +16,1220 @@ Test Case 4  		<error>
 
 
 Test Case 5  		<single>
-   File Two :  length0
+   Parameter from :  length0
 
 
 Test Case 6  		<error>
-   File Two :  lengthNeg
+   Parameter from :  lengthNeg
 
 
 Test Case 7  		<single>
-   File Two :  upper case
+   Parameter from :  upper case
 
 
 Test Case 8  		<single>
-   File Two :  lower case
+   Parameter from :  lower case
 
 
 Test Case 9  		<error>
    Parameter to :  lengthNeg
 
 
-Test Case 10 		(Key = 2.2.1.1.0.)
+Test Case 10 		(Key = 2.2.1.2.1.1.1.)
    File One                                        :  Not empty
    File Two                                        :  Not empty
-   Parameter to                                    :  length0
-   Number of matches of the pattern in second file :  None
-   Replace Value                                   :  <n/a>
-
-
-Test Case 11 		(Key = 2.2.2.1.0.)
-   File One                                        :  Not empty
-   File Two                                        :  Not empty
-   Parameter to                                    :  length1
-   Number of matches of the pattern in second file :  None
-   Replace Value                                   :  <n/a>
-
-
-Test Case 12 		(Key = 2.2.3.1.0.)
-   File One                                        :  Not empty
-   File Two                                        :  Not empty
-   Parameter to                                    :  lengthX
-   Number of matches of the pattern in second file :  None
-   Replace Value                                   :  <n/a>
-
-
-Test Case 13 		(Key = 2.2.5.1.0.)
-   File One                                        :  Not empty
-   File Two                                        :  Not empty
-   Parameter to                                    :  upper case
-   Number of matches of the pattern in second file :  None
-   Replace Value                                   :  <n/a>
-
-
-Test Case 14 		(Key = 2.2.6.1.0.)
-   File One                                        :  Not empty
-   File Two                                        :  Not empty
-   Parameter to                                    :  lower case
-   Number of matches of the pattern in second file :  None
-   Replace Value                                   :  <n/a>
-
-
-Test Case 15 		(Key = 2.5.1.1.1.)
-   File One                                        :  Not empty
-   File Two                                        :  length1
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  length0
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 16 		(Key = 2.5.1.2.1.)
+Test Case 11 		(Key = 2.2.1.2.1.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  length0
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 17 		(Key = 2.5.2.1.1.)
+Test Case 12 		(Key = 2.2.1.2.2.1.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  length1
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 18 		(Key = 2.5.2.2.1.)
+Test Case 13 		(Key = 2.2.1.2.2.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  length1
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 19 		(Key = 2.5.3.1.1.)
+Test Case 14 		(Key = 2.2.1.2.3.1.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  lengthX
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 20 		(Key = 2.5.3.2.1.)
+Test Case 15 		(Key = 2.2.1.2.3.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  lengthX
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 21 		(Key = 2.5.5.1.1.)
+Test Case 16 		(Key = 2.2.1.2.5.1.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  upper case
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 22 		(Key = 2.5.5.2.1.)
+Test Case 17 		(Key = 2.2.1.2.5.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  upper case
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 23 		(Key = 2.5.6.1.1.)
+Test Case 18 		(Key = 2.2.1.2.6.1.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  lower case
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 24 		(Key = 2.5.6.2.1.)
+Test Case 19 		(Key = 2.2.1.2.6.2.1.)
    File One                                        :  Not empty
-   File Two                                        :  length1
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  length1
    Parameter to                                    :  lower case
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace a shortString
 
 
-Test Case 25 		(Key = 2.6.1.1.2.)
+Test Case 20 		(Key = 2.2.1.3.1.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  length0
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a longString
 
 
-Test Case 26 		(Key = 2.6.1.3.2.)
+Test Case 21 		(Key = 2.2.1.3.1.3.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  length0
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace a longString
 
 
-Test Case 27 		(Key = 2.6.2.1.2.)
+Test Case 22 		(Key = 2.2.1.3.2.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  length1
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a longString
 
 
-Test Case 28 		(Key = 2.6.2.3.2.)
+Test Case 23 		(Key = 2.2.1.3.2.3.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  length1
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace a longString
 
 
-Test Case 29 		(Key = 2.6.3.1.2.)
+Test Case 24 		(Key = 2.2.1.3.3.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  lengthX
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a longString
 
 
-Test Case 30 		(Key = 2.6.3.3.2.)
+Test Case 25 		(Key = 2.2.1.3.3.3.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  lengthX
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace a longString
 
 
-Test Case 31 		(Key = 2.6.5.1.2.)
+Test Case 26 		(Key = 2.2.1.3.5.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  upper case
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a longString
 
 
-Test Case 32 		(Key = 2.6.5.3.2.)
+Test Case 27 		(Key = 2.2.1.3.5.3.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  upper case
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace a longString
 
 
-Test Case 33 		(Key = 2.6.6.1.2.)
+Test Case 28 		(Key = 2.2.1.3.6.1.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
    Parameter to                                    :  lower case
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace a longString
 
 
-Test Case 34 		(Key = 2.6.6.3.2.)
+Test Case 29 		(Key = 2.2.1.3.6.3.2.)
    File One                                        :  Not empty
-   File Two                                        :  lengthX
+   File Two                                        :  Not empty
+   Options                                         :  none
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 30 		(Key = 2.2.2.2.1.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 31 		(Key = 2.2.2.2.1.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 32 		(Key = 2.2.2.2.2.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 33 		(Key = 2.2.2.2.2.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 34 		(Key = 2.2.2.2.3.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 35 		(Key = 2.2.2.2.3.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 36 		(Key = 2.2.2.2.5.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 37 		(Key = 2.2.2.2.5.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 38 		(Key = 2.2.2.2.6.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 39 		(Key = 2.2.2.2.6.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 40 		(Key = 2.2.2.3.1.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 41 		(Key = 2.2.2.3.1.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 42 		(Key = 2.2.2.3.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 43 		(Key = 2.2.2.3.2.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 44 		(Key = 2.2.2.3.3.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 45 		(Key = 2.2.2.3.3.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 46 		(Key = 2.2.2.3.5.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 47 		(Key = 2.2.2.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 48 		(Key = 2.2.2.3.6.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 49 		(Key = 2.2.2.3.6.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 50 		(Key = 2.2.3.2.1.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 51 		(Key = 2.2.3.2.1.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 52 		(Key = 2.2.3.2.2.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 53 		(Key = 2.2.3.2.2.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 54 		(Key = 2.2.3.2.3.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 55 		(Key = 2.2.3.2.3.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 56 		(Key = 2.2.3.2.5.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 57 		(Key = 2.2.3.2.5.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 58 		(Key = 2.2.3.2.6.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 59 		(Key = 2.2.3.2.6.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 60 		(Key = 2.2.3.3.1.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 61 		(Key = 2.2.3.3.1.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 62 		(Key = 2.2.3.3.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 63 		(Key = 2.2.3.3.2.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 64 		(Key = 2.2.3.3.3.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 65 		(Key = 2.2.3.3.3.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 66 		(Key = 2.2.3.3.5.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 67 		(Key = 2.2.3.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 68 		(Key = 2.2.3.3.6.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 69 		(Key = 2.2.3.3.6.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 70 		(Key = 2.2.4.2.1.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 71 		(Key = 2.2.4.2.1.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 72 		(Key = 2.2.4.2.2.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 73 		(Key = 2.2.4.2.2.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 74 		(Key = 2.2.4.2.3.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 75 		(Key = 2.2.4.2.3.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 76 		(Key = 2.2.4.2.5.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 77 		(Key = 2.2.4.2.5.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 78 		(Key = 2.2.4.2.6.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 79 		(Key = 2.2.4.2.6.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 80 		(Key = 2.2.4.3.1.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 81 		(Key = 2.2.4.3.1.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 82 		(Key = 2.2.4.3.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 83 		(Key = 2.2.4.3.2.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 84 		(Key = 2.2.4.3.3.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 85 		(Key = 2.2.4.3.3.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 86 		(Key = 2.2.4.3.5.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 87 		(Key = 2.2.4.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 88 		(Key = 2.2.4.3.6.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 89 		(Key = 2.2.4.3.6.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 90 		(Key = 2.2.5.2.1.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 91 		(Key = 2.2.5.2.1.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 92 		(Key = 2.2.5.2.2.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 93 		(Key = 2.2.5.2.2.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 94 		(Key = 2.2.5.2.3.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 95 		(Key = 2.2.5.2.3.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 96 		(Key = 2.2.5.2.5.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 97 		(Key = 2.2.5.2.5.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 98 		(Key = 2.2.5.2.6.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 99 		(Key = 2.2.5.2.6.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 100		(Key = 2.2.5.3.1.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 101		(Key = 2.2.5.3.1.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 102		(Key = 2.2.5.3.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 103		(Key = 2.2.5.3.2.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 104		(Key = 2.2.5.3.3.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 105		(Key = 2.2.5.3.3.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 106		(Key = 2.2.5.3.5.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 107		(Key = 2.2.5.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 108		(Key = 2.2.5.3.6.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 109		(Key = 2.2.5.3.6.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 110		(Key = 2.2.6.2.1.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 111		(Key = 2.2.6.2.1.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 112		(Key = 2.2.6.2.2.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 113		(Key = 2.2.6.2.2.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 114		(Key = 2.2.6.2.3.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 115		(Key = 2.2.6.2.3.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 116		(Key = 2.2.6.2.5.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 117		(Key = 2.2.6.2.5.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 118		(Key = 2.2.6.2.6.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 119		(Key = 2.2.6.2.6.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace a shortString
+
+
+Test Case 120		(Key = 2.2.6.3.1.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 121		(Key = 2.2.6.3.1.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 122		(Key = 2.2.6.3.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 123		(Key = 2.2.6.3.2.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 124		(Key = 2.2.6.3.3.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 125		(Key = 2.2.6.3.3.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 126		(Key = 2.2.6.3.5.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 127		(Key = 2.2.6.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 128		(Key = 2.2.6.3.6.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace a longString
+
+
+Test Case 129		(Key = 2.2.6.3.6.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  wrongOpt
+   Parameter from                                  :  lengthX
    Parameter to                                    :  lower case
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace a longString
