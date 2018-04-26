@@ -3,21 +3,30 @@ package edu.qc.seclass;
 public class BuggyClass {
 
     //task1
-    public double buggyMethod1(double a, double b){
+    public double buggyMethod1(double numerator, double denominator){
 
-        double result = a / b;
+        double result = numerator / denominator;
 
-        if(a > 0 && b > 0 )
+        /*
+         1. 100% coverage and does not reveal fault
+         2. 50% coverage, reveals fault - See TestSC1b for test.
+         */
+        if(denominator != 0)
             return result;
+        else
+            System.out.println("You divided by zero. Error");
 
-        else if(a < 0 || b < 0)
-            return result;
-
-        else if (a > 0 || b < 0)
-            return result;
-
-        else if (a < 0 || b > 0)
-            return result;
+//        if(a > 0 && b > 0 )
+//            return result;
+//
+//        else if(a < 0 || b < 0)
+//            return result;
+//
+//        else if (a > 0 || b < 0)
+//            return result;
+//
+//        else if (a < 0 || b > 0)
+//            return result;
 
         return result;
     }
