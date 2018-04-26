@@ -48,8 +48,22 @@ public class BuggyClass {
     }
 
     //TODO: Task 2
-    public double buggyMethod2(double a, double b){
-        return  a / b;
+    public double buggyMethod2(double numerator, double denominator){
+
+        double quotient = numerator / denominator;
+
+        /*
+            1.  100% statement coverage and does not reveal fault.
+            2.  More than 50% branch coverage reveals fault
+         */
+        if(quotient > 0)
+            System.out.println("result > 0, " + quotient);
+        else if(quotient < 0)
+            System.out.println("result < 0, " + quotient);
+        else
+            System.out.println("K.");
+        return quotient;
+
 
     }
 
