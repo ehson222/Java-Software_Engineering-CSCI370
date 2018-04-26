@@ -14,6 +14,7 @@ public class BuggyClassTestSC1a {
         buggyClass.buggyMethod1(10, -5);
         buggyClass.buggyMethod1(-10, 5);
         buggyClass.buggyMethod1(-10, 5);
+        buggyClass.buggyMethod1(0, 5);
 
         //buggyClass.buggyMethod1(0, -3);
 
