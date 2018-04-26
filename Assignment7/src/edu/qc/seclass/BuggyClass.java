@@ -19,4 +19,26 @@ public class BuggyClass {
             return 0;
 
     }
+
+    //TODO: Task 2
+    public double buggyMethod2(double a, double b){
+        return  a / b;
+
+    }
+
+    //TODO: Task 3
+    public double buggyMethod3(double a, double b){
+        return a/b;
+    }
+
+    //TODO: Task 4
+    public double buggyMethod4(double a, double b){
+        return a/b;
+
+    }
+
+    //TODO: Task 5
+    public double buggyMethod5(double a, double b){
+        return a/b;
+    }
 }
