@@ -8,13 +8,17 @@ public class BuggyClass {
         double result = numerator / denominator;
 
         /*
-         1. 100% coverage and does not reveal fault
-         2. 50% coverage, reveals fault - See TestSC1b for test.
+         1. 100% statement coverage and does not reveal fault
+         2. less than 50% statement coverage, reveals fault - See TestSC1b for test.
          */
-        if(denominator != 0)
+        if(numerator > 0)
             return result;
-        else
-            System.out.println("You divided by zero. Error");
+        else if(denominator > 0)
+            return result;
+        else if(numerator < 0)
+            return result;
+        else if(denominator < 0)
+            return result;
 
 //        if(a > 0 && b > 0 )
 //            return result;
