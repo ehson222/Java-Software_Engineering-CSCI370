@@ -10,6 +10,8 @@ public class BuggyClassTestSC1a {
     public void testBugMeth1(){
         buggyClass.buggyMethod1(2, 3);  // a > 0 and b >0
         buggyClass.buggyMethod1(-2, -3); //a < 0 and b < 0
+        buggyClass.buggyMethod1(-2, 3); //a < 0 and b > 0
+        buggyClass.buggyMethod1(2, -3); //a > 0 and b < 0
     }
 
 

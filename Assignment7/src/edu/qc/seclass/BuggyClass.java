@@ -15,9 +15,11 @@ public class BuggyClass {
 
         else if (a > 0 || b < 0)
             return result;
-        else
-            return 0;
 
+        else if (a < 0 || b > 0)
+            return result;
+
+        return result;
     }
 
     //TODO: Task 2
