@@ -99,12 +99,11 @@ public class BuggyClass {
          * 100% branch coverage and does not reveal fault
          */
 
-        if(denominator != 0) {
+        if(denominator > 0) {
             double quotient = numerator / denominator;
         }
         else
             System.out.println("nothing");
-
     }
 
     //TODO: Task 5
