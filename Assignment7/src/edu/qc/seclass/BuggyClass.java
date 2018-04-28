@@ -81,7 +81,7 @@ public class BuggyClass {
     }
 
     //TODO: Task 3
-    public buggyMethod3(){
+    public void buggyMethod3(){
 
         /*
          *  Not possible.
