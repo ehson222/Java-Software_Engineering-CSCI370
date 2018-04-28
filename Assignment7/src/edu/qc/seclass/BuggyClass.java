@@ -9,7 +9,7 @@ public class BuggyClass {
 
         /*
             1.  100% statement coverage and does not reveal fault.
-            2.  More than 50% branch coverage reveals fault
+            2.  More than 50% statement coverage reveals fault
          */
         if (quotient > 0)
             System.out.println("result > 0, " + quotient);
@@ -82,12 +82,26 @@ public class BuggyClass {
 
     //TODO: Task 3
     public double buggyMethod3(double a, double b){
+        /**
+         * 100% branch coverage, does not reveal fault,
+         * 100% statement coverage, NOT 100% statement coverage, reveals fault.
+         */
+
+
         return a/b;
     }
 
     //TODO: Task 4
-    public double buggyMethod4(double a, double b){
-        return a/b;
+    public void buggyMethod4(){
+
+
+        /*
+        *  Not possible.
+        *
+        *
+        *
+         */
+
 
     }
 

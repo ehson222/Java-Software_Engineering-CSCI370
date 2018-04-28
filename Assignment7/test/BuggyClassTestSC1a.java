@@ -23,11 +23,7 @@ public class BuggyClassTestSC1a {
 
     }
 
-    @Test
-    public void testBugMeth2(){
-        buggyClass.buggyMethod2(10, 5);
-        buggyClass.buggyMethod2(5,10);
-    }
+
 
 
 
