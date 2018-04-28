@@ -93,18 +93,28 @@ public class BuggyClass {
     }
 
     //TODO: Task 4
-    public void buggyMethod4(double numerator, double denominator){
+    public int buggyMethod4(boolean a, boolean b){
         /**
          * 100% statement coverage reveals fault,
          * 100% branch coverage and does not reveal fault
          */
+        double x = 5;
+        double y = 0;
 
-        if(denominator > 0) {
-            double quotient = numerator / denominator;
+        if(a){
+            x = x + y;
+            System.out.println(x);
+        }
+        else if(!b){
+            x = x / y;
+            System.out.println("Error can't divide by 0");
         }
         else
-            System.out.println("nothing");
+            System.out.println("Do nothing");
+
+        return (int) x;
     }
+
 
     //TODO: Task 5
     public double buggyMethod5(double a, double b){
