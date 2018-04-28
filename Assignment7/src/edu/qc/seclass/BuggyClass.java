@@ -82,10 +82,14 @@ public class BuggyClass {
 
     //TODO: Task 3
     public double buggyMethod3(double a, double b){
-        /**
-         * 100% branch coverage, does not reveal fault,
-         * 100% statement coverage, NOT 100% statement coverage, reveals fault.
+
+        /*
+         *  Not possible.
+         *
+         *
+         *
          */
+
 
 
         return a/b;
@@ -93,14 +97,11 @@ public class BuggyClass {
 
     //TODO: Task 4
     public void buggyMethod4(){
-
-
-        /*
-        *  Not possible.
-        *
-        *
-        *
+        /**
+         * 100% branch coverage, does not reveal fault,
+         * 100% statement coverage, NOT 100% statement coverage, reveals fault.
          */
+
 
 
     }

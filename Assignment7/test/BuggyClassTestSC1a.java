@@ -1,7 +1,10 @@
 import edu.qc.seclass.BuggyClass;
+import org.junit.Assert;
 import org.junit.Assert.*;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
+
 
 public class BuggyClassTestSC1a {
 
@@ -9,12 +12,20 @@ public class BuggyClassTestSC1a {
 
     @Test
     public void testBugMeth1(){
-        buggyClass.buggyMethod1(10, 5);
-        buggyClass.buggyMethod1(5, 10);
-        buggyClass.buggyMethod1(10, -5);
-        buggyClass.buggyMethod1(-10, 5);
-        buggyClass.buggyMethod1(-10, 5);
-        buggyClass.buggyMethod1(0, 5);
+        //buggyClass.buggyMethod1(10, 5);
+
+        assertEquals(2.0, buggyClass.buggyMethod1(10, 5), 0);
+        assertEquals(0.5, buggyClass.buggyMethod1(5, 10), 0);
+        assertEquals(-2.0, buggyClass.buggyMethod1(10, -5), 0);
+        assertEquals(-0.5, buggyClass.buggyMethod1(-5, 10), 0);
+        assertEquals(0.0, buggyClass.buggyMethod1(0, 5), 0);
+
+
+        //buggyClass.buggyMethod1(5, 10);
+        //buggyClass.buggyMethod1(10, -5);
+        //buggyClass.buggyMethod1(-10, 5);
+        //buggyClass.buggyMethod1(-10, 5);
+        //buggyClass.buggyMethod1(0, 5);
 
         //buggyClass.buggyMethod1(0, -3);
 
