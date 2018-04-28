@@ -93,17 +93,17 @@ public class BuggyClass {
     }
 
     //TODO: Task 4
-    public double buggyMethod4(double numerator, double denominator){
+    public void buggyMethod4(double numerator, double denominator){
         /**
          * 100% statement coverage reveals fault,
          * 100% branch coverage and does not reveal fault
          */
 
-        if(denominator != 0)
-            return numerator / denominator;
+        if(denominator != 0) {
+            double quotient = numerator / denominator;
+        }
         else
-            System.out.println("Cannot divide by zero");
-
+            System.out.println("nothing");
 
     }
 
