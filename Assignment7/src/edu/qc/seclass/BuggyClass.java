@@ -81,7 +81,7 @@ public class BuggyClass {
     }
 
     //TODO: Task 3
-    public double buggyMethod3(double a, double b){
+    public buggyMethod3(){
 
         /*
          *  Not possible.
@@ -90,18 +90,19 @@ public class BuggyClass {
          *
          */
 
-
-
-        return a/b;
     }
 
     //TODO: Task 4
-    public void buggyMethod4(){
+    public double buggyMethod4(double numerator, double denominator){
         /**
-         * 100% branch coverage, does not reveal fault,
-         * 100% statement coverage, NOT 100% statement coverage, reveals fault.
+         * 100% statement coverage reveals fault,
+         * 100% branch coverage and does not reveal fault
          */
 
+        if(denominator != 0)
+            return numerator / denominator;
+        else
+            System.out.println("Cannot divide by zero");
 
 
     }
