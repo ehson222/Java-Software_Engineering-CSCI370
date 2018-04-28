@@ -2,7 +2,6 @@ package edu.qc.seclass;
 
 public class BuggyClass {
 
-    //task1
     public double buggyMethod1(double numerator, double denominator) {
 
         double quotient = numerator / denominator;
@@ -60,7 +59,6 @@ public class BuggyClass {
 //        else if (a < 0 || b > 0)
 //            return result;
 
-    //TODO: Task 2
     public double buggyMethod2(double numerator, double denominator){
 
         double quotient = numerator / denominator;
@@ -92,7 +90,6 @@ public class BuggyClass {
 
     }
 
-    //TODO: Task 4
     public int buggyMethod4(boolean a, boolean b){
         /**
          * 100% statement coverage reveals fault,
