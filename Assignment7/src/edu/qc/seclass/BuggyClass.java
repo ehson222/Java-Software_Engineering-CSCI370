@@ -82,9 +82,13 @@ public class BuggyClass {
 
     public void buggyMethod3() {
         /*
-         *  Having 100% branch coverage that does not reveal fault means there
-         *  is also a 100% statement coverage that does not reveal fault, and it
-         *  can't be the other way around.  Statement coverage falls under branch
+         *  Having 100% branch coverage means that there is also a 100% statement coverage, and it
+         *  can't be the other way around.  100% Branch coverage with does not reveal fault and a 100% statement coverage,
+         *  not achieve full (100%) branch coverage reveals fault is not possible.  Not achieving full branch means
+         *  it also not achieving full statement branch.  Full branch coverage no fault reveal also means full statement
+         *  coverage no fault reveal.
+         *
+         *  Statement coverage falls under branch
          *  coverage because branch coverage is more expensive to do but it is more
          *  reliable method for testing while statement is less expensive, easier to do
          *  and it used mostly in the software testing industry.
