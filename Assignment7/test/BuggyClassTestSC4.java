@@ -11,7 +11,7 @@ public class BuggyClassTestSC4 {
     BuggyClass buggyClass = new BuggyClass();
 
     @Test (expected = AssertionError.class)
-    public void testBugMeth(){
+    public void testBugMeth4(){
 
         //100% statement coverage reveals fault
 

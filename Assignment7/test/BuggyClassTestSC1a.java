@@ -34,9 +34,4 @@ public class BuggyClassTestSC1a {
         //assertEquals(2, buggyClass.buggyMethod1(5, 10), 5/10);
 
     }
-
-
-
-
-
 }

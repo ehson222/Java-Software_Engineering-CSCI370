@@ -17,8 +17,9 @@ public class BuggyClassTestBC4 {
         assertEquals(5.0, buggyClass.buggyMethod4(true, true), 0.0);
         // without expected, Output: 5.0
         assertEquals(5.0, buggyClass.buggyMethod4(true, false), 0);
-        // without expected, Output:  Do Nothing
-        assertEquals("Does not reveal fault", buggyClass.buggyMethod4(false, true), 0);
+        // without expected, Output:  given values does not show output or error -- not reveal fault
+        assertEquals("Values does not show output or error", buggyClass.buggyMethod4(false, true), 0);
+        // without expected, Output:  No Output
     }
 
 }
