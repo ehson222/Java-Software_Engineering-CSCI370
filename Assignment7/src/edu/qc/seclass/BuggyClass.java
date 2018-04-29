@@ -78,13 +78,17 @@ public class BuggyClass {
 
     }
 
-    //TODO: Task 3
     public void buggyMethod3(){
 
-        /*
-         *  Not possible.
+        /*  Reference:  Udacity - https://classroom.udacity.com/courses/ud805
+         *  Having 100% branch coverage that does not reveal fault means there
+         *  is also a 100% statement coverage that does not reveal fault, AND IT
+         *  CAN'T BE THE OTHER WAY AROUND.  Statement coverage falls under branch
+         *  coverage because branch coverage is more expensive to do but it is more
+         *  reliable method for testing.
          *
-         *
+         *  Therefore, 100% branch does not reveal fault AND 100% statement coverage
+         *  DOES NOT achieve 100% branch coverage reveals fault IS NOT possible.
          *
          */
 
@@ -114,7 +118,11 @@ public class BuggyClass {
 
 
     //TODO: Task 5
-    public double buggyMethod5(double a, double b){
-        return a/b;
+    public void buggyMethod5(int i){
+        int x;
+        //[point where you can add code]
+        x = i / 0;
+        //[point where you can add code]
+
     }
 }
