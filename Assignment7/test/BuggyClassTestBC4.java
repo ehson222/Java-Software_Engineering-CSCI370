@@ -10,12 +10,15 @@ public class BuggyClassTestBC4 {
 
     BuggyClass buggyClass;
 
-    @Test(expected = NullPointerException.class)
+    @Test (expected = NullPointerException.class)
     public void testBugMeth4(){
 
+        // without expected, Output: 5.0
         assertEquals(5.0, buggyClass.buggyMethod4(true, true), 0.0);
+        // without expected, Output: 5.0
         assertEquals(5.0, buggyClass.buggyMethod4(true, false), 0);
-        assertEquals("error", buggyClass.buggyMethod4(false, true), 0);
+        // without expected, Output:  Do Nothing
+        assertEquals("Does not reveal fault", buggyClass.buggyMethod4(false, true), 0);
     }
 
 }

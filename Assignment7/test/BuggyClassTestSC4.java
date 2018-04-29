@@ -14,10 +14,11 @@ public class BuggyClassTestSC4 {
     public void testBugMeth(){
 
         //100% statement coverage reveals fault
+
         assertEquals(5.0, buggyClass.buggyMethod4(true, true), 0.0);
-        assertEquals("error", buggyClass.buggyMethod4(false, false), 0);
+        assertEquals("reveals fault", buggyClass.buggyMethod4(false, false), 0);
         assertEquals(5.0, buggyClass.buggyMethod4(true, false), 0);
-        assertEquals("error", buggyClass.buggyMethod4(false, true), 0);
+        assertEquals("Do Nothing", buggyClass.buggyMethod4(false, true), 0);
 
     }
 }
