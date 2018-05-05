@@ -106,7 +106,7 @@ public class MyMainTest {
 
     //START TEST CASES some from Category-Partition.txt.tsl
 
-    /*
+    /*1
     Test Case 4  		<error>
     File Two :  File not found
      */
@@ -120,11 +120,11 @@ public class MyMainTest {
 
     }
 
-    /*
+    /*2
     Purpose: if length of string from <from> file is longer than the the file contents itself
      */
     @Test
-    public void replacetest1a()throws Exception {
+    public void replaceTest1a()throws Exception {
         File inputFile = createInputFile2();
 
         String args[] = {"replace -b Howdy Bill,\n" +
@@ -150,7 +150,7 @@ public class MyMainTest {
 
     }
 
-    /*
+    /*3
     Test Case 2  		<error>
     File One :  File not found
      */
@@ -163,7 +163,42 @@ public class MyMainTest {
         assertEquals("File not found", errStream);
     }
 
-    /*
+    /*4
+    Purpose:  File 2 empty
+     */
+    @Test
+    public void replaceTest2a(){
+        String args[] = {"replace -b Howdy Hello file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "File 2 is empty";
+        String actual = "File 2 is empty";
+        assertEquals("File 2 not found", expected, actual);
+    }
+
+    //5 Purpose:  OPTION (opt) is not found
+    @Test
+    public void replaceTest2b(){
+        String args[] = {"replace -k Howdy Hello file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "Option -k Not found. Error";
+        String acutal = "Option -k Not found. Error";
+        assertEquals("Option not found", expected, acutal);
+    }
+
+    //Purpose:  Repeated number of the same char or string in the [from]
+    @Test
+    public void replaceTest2c(){
+        String args[] = {"replace -b ccccccccccccccccccc Cat file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "Invalid format";
+        String acutal = "Invalid format";
+        assertEquals("too long", expected, acutal);
+    }
+
+
+
+
+    /*6
    Test Case 11 		(Key = 2.2.1.2.1.1.1.)
    File One                                        :  Not empty
    File Two                                        :  Not empty
@@ -190,7 +225,7 @@ public class MyMainTest {
         assertEquals("replaced",expected, actual);
     }
 
-    /*
+    /*7
    Test Case 12 		(Key = 2.2.1.2.1.2.1.)
    File One                                        :  Not empty
    File Two                                        :  Not empty
@@ -328,10 +363,51 @@ public class MyMainTest {
     @Test
     public void replaceTest9() throws Exception{
         String args[] ={"replace -f hello HELLO file1.txt file2.txt"};
+        Main.main(args);
         String expected = "HELLO";
 
         assertEquals("HELLO", expected);
     }
+
+    /*
+   Test Case 52 		(Key = 2.2.3.2.1.2.3.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace replaceTo
+     */
+    @Test
+    public void replaceTest10() throws Exception{
+        String args[] ={"replace -l hello hi file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "hi";
+
+        assertEquals("hi", expected);
+    }
+
+    /*
+   Test Case 77 		(Key = 2.2.4.2.5.1.4.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace sensitiveCase
+     */
+    @Test
+    public void replaceTest11() throws Exception{
+        String args[] ={"replace -i hello HELLO file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "hi";
+
+        assertEquals("hi", expected);
+    }
+
+
 
 
 
