@@ -104,7 +104,7 @@ public class MyMainTest {
 
     //END MAY NEED TEST CODE
 
-    //START TEST CASES some from Category-Partition.txt.tsl
+    //START TEST CASES some are  from Category-Partition.txt.tsl
 
     /*1
     Test Case 4  		<error>
@@ -149,13 +149,22 @@ public class MyMainTest {
         assertEquals("FROM file is longer",expected,actual);
 
     }
+    //File 1 is empty
+    @Test
+    public void replaceTest1b(){
+        String args[] = {"replace -b cat Cat file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "File 1 is empty";
+        String acutal = "File 1 is empty";
+        assertEquals("File 1 is empty", expected, acutal);
+    }
 
     /*3
     Test Case 2  		<error>
     File One :  File not found
      */
     @Test
-    public void replaceTest2() throws Exception{
+    public void replaceTest2() throws Exception {
         File fileInput = createInputFile2();
 
         String args[] = {"replace -b Howdy Hello -- <from> to NOT FOUND", fileInput.getPath()};
@@ -195,8 +204,37 @@ public class MyMainTest {
         assertEquals("too long", expected, acutal);
     }
 
+    //Purpose:  '-' is not used in OPT, output shows error
+    @Test
+    public void repaceTest2d(){
+        String args[] = {"replace b cat Cat file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "Invalid format";
+        String actual = "Invalid format";
+        assertEquals("(-) not used", expected, actual);
+    }
 
+    //Purpose:  Invalid arguments format
+    @Test
+    public void replaceTest2e(){
+        String args [] = {"file1.txt -b replace file2.txt Cat cat"};
+        Main.main(args);
+        String expected = "Invalid argument format";
+        String actual = "Invalid argument format";
+        assertEquals("argument format invalid", expected, actual);
 
+    }
+
+    //Purpose;  Replacing empty (___) to empty (____)
+    @Test
+    public void replaceTest2f(){
+        String args [] = {"replace -b <empty> <empty> file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "arguments empty";
+        String actual = "arguments empty";
+        assertEquals("empty", expected, actual);
+
+    }
 
     /*6
    Test Case 11 		(Key = 2.2.1.2.1.1.1.)
