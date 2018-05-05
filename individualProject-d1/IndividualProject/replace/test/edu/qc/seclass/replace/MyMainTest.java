@@ -121,6 +121,36 @@ public class MyMainTest {
     }
 
     /*
+    Purpose: if length of string from <from> file is longer than the the file contents itself
+     */
+    @Test
+    public void replacetest1a()throws Exception {
+        File inputFile = createInputFile2();
+
+        String args[] = {"replace -b Howdy Bill,\n" +
+                "This is another test file for the replace utility\n" +
+                "that contains a list:\n" +
+                "-a) Item 1\n" +
+                "-b) Item 2\n" +
+                "...\n" +
+                "and says \"howdy Bill\" twice... the Avengers was a great movie!  -- file1.txt file2.txt "};
+
+        String expected = "\"Howdy Bill,\\n\" +\n" +
+                "               \"This is another test file for the replace utility\\n\" +\n" +
+                "                \"that contains a list:\\n\" +\n" +
+                "                \"-a) Item 1\\n\" +\n" +
+                "                \"-b) Item 2\\n\" +\n" +
+                "                \"...\\n\" +\n" +
+                "                \"and says \\\"howdy Bill\\\" twice\"";
+
+        String actual = getFileContent(inputFile.getPath());
+
+        Main.main(args);
+        assertEquals("FROM file is longer",expected,actual);
+
+    }
+
+    /*
     Test Case 2  		<error>
     File One :  File not found
      */
@@ -186,6 +216,121 @@ public class MyMainTest {
 
         String actual = getFileContent(fileInput.getPath());
         assertEquals("replaced",expected, actual);
+    }
+
+    @Test
+    public void replaceTest5() throws Exception{
+        File fileInput = createInputFile1();
+
+        String args[] = {"replace -i Bill William file1.txt file2.txt", fileInput.getPath()};
+        Main.main(args);
+
+        String expected = "Howdy Bill,\n" +
+                "This is a test file for the replace utility\n" +
+                "Let's make sure it has at least a few lines\n" +
+                "so that we can create some interesting test cases...\n" +
+                "And let's say \"howdy bill\" again!";
+
+        String actual = getFileContent(fileInput.getPath());
+        assertEquals("replaced",expected, actual);
+    }
+    /*
+   Test Case 16 		(Key = 2.2.1.2.3.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace with backUp
+     */
+    @Test
+    public void replaceTest6() throws Exception{
+        File input = createInputFile3();
+        String args[] = {"replace -b 'have' 'evah' file1.txt, file2.txt"};
+        String args1[] = {"replace -i 'have' 'evah' file1.txt, file2.txt"};
+        Main.main(args);
+        Main.main(args1);
+
+        String expected = "Howdy Bill, have you learned your abc and 123?\n" +
+                          "It is important to know your abc and 123," +
+                          "so you should study it\n" +
+                          "and then repeat with me: abc and 123";
+
+        String actual = getFileContent(input.getPath());
+        assertEquals("Replaced ", expected, actual);
+
+    }
+
+    /*
+   Test Case 72 		(Key = 2.2.4.2.1.2.4.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value
+     */
+
+    @Test
+    public void replaceTest7() throws Exception{
+        File input = createInputFile3();
+        String args1[] = {"replace -i 'have' 'evah' file1.txt, file2.txt"};
+        Main.main(args1);
+
+        String expected = "Howdy Bill, have you learned your abc and 123?\n" +
+                "It is important to know your abc and 123," +
+                "so you should study it\n" +
+                "and then repeat with me: abc and 123";
+
+        String actual = getFileContent(input.getPath());
+        assertEquals("Replaced ", expected, actual);
+
+    }
+
+    /*
+   Test Case 32 		(Key = 2.2.2.2.1.2.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test
+    public void replaceTest8() throws Exception{
+        File input = createInputFile3();
+        String args1[] = {"replace -f 'have' 'evah' file1.txt, file2.txt"};
+        Main.main(args1);
+
+        String expected = "Howdy Bill, have you learned your abc and 123?\n" +
+                "It is important to know your abc and 123," +
+                "so you should study it\n" +
+                "and then repeat with me: abc and 123";
+
+        String actual = getFileContent(input.getPath());
+        assertEquals("Replaced ", expected, actual);
+
+    }
+
+    /*
+   Test Case 48 		(Key = 2.2.2.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace replaceFrom
+   */
+    @Test
+    public void replaceTest9() throws Exception{
+        String args[] ={"replace -f hello HELLO file1.txt file2.txt"};
+        String expected = "HELLO";
+
+        assertEquals("HELLO", expected);
     }
 
 
