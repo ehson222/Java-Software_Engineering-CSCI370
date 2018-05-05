@@ -160,6 +160,34 @@ public class MyMainTest {
         assertEquals("replaced",expected, actual);
     }
 
+    /*
+   Test Case 12 		(Key = 2.2.1.2.1.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace with backUp
+     */
+
+    @Test
+    public void replaceTest4() throws Exception{
+        File fileInput = createInputFile1();
+
+        String args[] = {"replace -i Bill William file1.txt file2.txt", fileInput.getPath()};
+        Main.main(args);
+
+        String expected = "Howdy Bill,\n" +
+                "This is a test file for the replace utility\n" +
+                "Let's make sure it has at least a few lines\n" +
+                "so that we can create some interesting test cases...\n" +
+                "And let's say \"howdy bill\" again!";
+
+        String actual = getFileContent(fileInput.getPath());
+        assertEquals("replaced",expected, actual);
+    }
+
 
 
 
