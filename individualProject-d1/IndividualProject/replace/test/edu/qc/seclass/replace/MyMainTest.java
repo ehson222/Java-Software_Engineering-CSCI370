@@ -152,7 +152,7 @@ public class MyMainTest {
     //File 1 is empty
     @Test
     public void replaceTest1b(){
-        String args[] = {"replace -b cat Cat file1.txt file2.txt"};
+        String args[] = {"replace -b cat Cat -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "File 1 is empty";
         String acutal = "File 1 is empty";
@@ -177,7 +177,7 @@ public class MyMainTest {
      */
     @Test
     public void replaceTest2a(){
-        String args[] = {"replace -b Howdy Hello file1.txt file2.txt"};
+        String args[] = {"replace -b Howdy Hello -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "File 2 is empty";
         String actual = "File 2 is empty";
@@ -187,7 +187,7 @@ public class MyMainTest {
     //5 Purpose:  OPTION (opt) is not found
     @Test
     public void replaceTest2b(){
-        String args[] = {"replace -k Howdy Hello file1.txt file2.txt"};
+        String args[] = {"replace -k Howdy Hello -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "Option -k Not found. Error";
         String acutal = "Option -k Not found. Error";
@@ -197,7 +197,7 @@ public class MyMainTest {
     //Purpose:  Repeated number of the same char or string in the [from]
     @Test
     public void replaceTest2c(){
-        String args[] = {"replace -b ccccccccccccccccccc Cat file1.txt file2.txt"};
+        String args[] = {"replace -b ccccccccccccccccccc Cat -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "Invalid format";
         String acutal = "Invalid format";
@@ -207,7 +207,7 @@ public class MyMainTest {
     //Purpose:  '-' is not used in OPT, output shows error
     @Test
     public void repaceTest2d(){
-        String args[] = {"replace b cat Cat file1.txt file2.txt"};
+        String args[] = {"replace b cat Cat -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "Invalid format";
         String actual = "Invalid format";
@@ -217,7 +217,7 @@ public class MyMainTest {
     //Purpose:  Invalid arguments format
     @Test
     public void replaceTest2e(){
-        String args [] = {"file1.txt -b replace file2.txt Cat cat"};
+        String args [] = {"file1.txt -b replace --  file2.txt Cat cat"};
         Main.main(args);
         String expected = "Invalid argument format";
         String actual = "Invalid argument format";
@@ -225,14 +225,36 @@ public class MyMainTest {
 
     }
 
-    //Purpose;  Replacing empty (___) to empty (____)
+    //Purpose:  Replacing empty (___) to empty (____)
     @Test
     public void replaceTest2f(){
-        String args [] = {"replace -b <empty> <empty> file1.txt file2.txt"};
+        String args [] = {"replace -b <empty> <empty> -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "arguments empty";
         String actual = "arguments empty";
         assertEquals("empty", expected, actual);
+
+    }
+
+    //Purpose:  Error writing back-up file
+    @Test
+    public void replaceTest2g(){
+        String args [] = {"replace -b hello Hello -- file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "-b:  ERROR CREATING BACK UP FILE";
+        String actual = "-b:  ERROR CREATING BACK UP FILE";
+        assertEquals("error", expected, actual);
+
+    }
+
+    //Purpose:  (--) format is not entered
+    @Test
+    public void replaceTest2h(){
+        String args [] = {"replace -b hello Hello  file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "(--) not entered, invalid command format";
+        String actual = "(--) not entered, invalid command format";
+        assertEquals("error", expected, actual);
 
     }
 
@@ -250,7 +272,7 @@ public class MyMainTest {
     public void replaceTest3() throws Exception{
         File fileInput = createInputFile1();
 
-        String args[] = {"replace -i Hello Howdy file1.txt file2.txt", fileInput.getPath()};
+        String args[] = {"replace -b Hello Howdy file1.txt file2.txt", fileInput.getPath()};
         Main.main(args);
 
         String expected = "Howdy Bill,\n" +
@@ -295,7 +317,7 @@ public class MyMainTest {
     public void replaceTest5() throws Exception{
         File fileInput = createInputFile1();
 
-        String args[] = {"replace -i Bill William file1.txt file2.txt", fileInput.getPath()};
+        String args[] = {"replace -i Bill William -- file1.txt file2.txt", fileInput.getPath()};
         Main.main(args);
 
         String expected = "Howdy Bill,\n" +
@@ -320,8 +342,8 @@ public class MyMainTest {
     @Test
     public void replaceTest6() throws Exception{
         File input = createInputFile3();
-        String args[] = {"replace -b 'have' 'evah' file1.txt, file2.txt"};
-        String args1[] = {"replace -i 'have' 'evah' file1.txt, file2.txt"};
+        String args[] = {"replace -b 'have' 'evah' -- file1.txt, file2.txt"};
+        String args1[] = {"replace -i 'have' 'evah' -- file1.txt, file2.txt"};
         Main.main(args);
         Main.main(args1);
 
@@ -349,7 +371,7 @@ public class MyMainTest {
     @Test
     public void replaceTest7() throws Exception{
         File input = createInputFile3();
-        String args1[] = {"replace -i 'have' 'evah' file1.txt, file2.txt"};
+        String args1[] = {"replace -i 'have' 'evah' -- file1.txt, file2.txt"};
         Main.main(args1);
 
         String expected = "Howdy Bill, have you learned your abc and 123?\n" +
@@ -375,7 +397,7 @@ public class MyMainTest {
     @Test
     public void replaceTest8() throws Exception{
         File input = createInputFile3();
-        String args1[] = {"replace -f 'have' 'evah' file1.txt, file2.txt"};
+        String args1[] = {"replace -f 'have' 'evah' -- file1.txt, file2.txt"};
         Main.main(args1);
 
         String expected = "Howdy Bill, have you learned your abc and 123?\n" +
@@ -400,7 +422,7 @@ public class MyMainTest {
    */
     @Test
     public void replaceTest9() throws Exception{
-        String args[] ={"replace -f hello HELLO file1.txt file2.txt"};
+        String args[] ={"replace -f hello HELLO -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "HELLO";
 
@@ -419,7 +441,7 @@ public class MyMainTest {
      */
     @Test
     public void replaceTest10() throws Exception{
-        String args[] ={"replace -l hello hi file1.txt file2.txt"};
+        String args[] ={"replace -l hello hi -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "hi";
 
@@ -438,12 +460,150 @@ public class MyMainTest {
      */
     @Test
     public void replaceTest11() throws Exception{
-        String args[] ={"replace -i hello HELLO file1.txt file2.txt"};
+        String args[] ={"replace -i hello HELLO -- file1.txt file2.txt"};
         Main.main(args);
         String expected = "hi";
 
         assertEquals("hi", expected);
     }
+
+    /*
+    Test Case 35 		(Key = 2.2.2.2.3.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test
+    public void replaceTest12() throws Exception{
+        String args[] ={"replace -f hello HELLO -- file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "no match";
+
+        assertEquals("no match", expected);
+    }
+
+    /*
+    Test Case 38 		(Key = 2.2.2.2.5.2.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace replaceFrom
+     */
+
+    @Test
+    public void replaceTest13() throws Exception{
+        String args[] ={"replace -f hello heLLO -- file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "replaced";
+
+        assertEquals("replaced", expected);
+    }
+
+    /*
+    Test Case 14 		(Key = 2.2.1.2.2.2.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace with backUp
+     */
+    @Test
+    public void replaceTest14(){
+        String args[] ={"replace -b i k -- file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "replaced from i to k";
+
+        assertEquals("replaced from i to k", expected);
+    }
+
+    /*
+    est Case 17 		(Key = 2.2.1.2.5.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace with backUp
+     */
+
+    @Test
+    public void replaceTest15(){
+        String args[] ={"replace -b k K -- file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "replaced from k to K";
+
+        assertEquals("replaced from k to K", expected);
+    }
+
+    /*
+    Test Case 19 		(Key = 2.2.1.2.6.1.1.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -b
+   Parameter from                                  :  length1
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace with backUp
+
+     */
+    @Test
+    public void replaceTest16(){
+        String args[] ={"replace -b KETCHUP ketchup -- file1.txt file2.txt"};
+        Main.main(args);
+        String expected = "replaced from KETCHUP to ketchup";
+
+        assertEquals("replaced from KETCHUP to ketchup", expected);
+    }
+
+    //Purpose:  From string content are special characters and to string content are special characters as well.
+    //replaces all first occurrences and all last occurrences of special characters and creates a back up as well.
+    @Test (expected = ComparisonFailure.class)
+    public void replaceTest17(){
+        String args[] = {"replace -b !! @@ -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "The !! quick brown fox !! jumps over";
+        String actual = "The @@ quick brown fox @@ jumps over";
+
+        assertEquals("replaced", expected, actual);
+    }
+
+    //Purpose:  replace string case sensitive with backup.
+    @Test
+    public void replaceTest18(){
+        String args[] = {"replace -b cAsEsEnSiTiVe CaSeSeNsItIvE -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "Replaced cAsEsEnSiTiVe to CaSeSeNsItIvE";
+        String acutal = "Replaced cAsEsEnSiTiVe to CaSeSeNsItIvE";
+
+        assertEquals("replaced", expected, acutal);
+    }
+
+    //Purpose:  String with special characters from file 1 to strings with special characters in file 2.
+    //replaces all special character case insensitive
+    @Test
+    public void replaceTest19(){
+        String args [] = {"replace -b caseInsensitive case -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "This is case insensitive";
+        String actual = "This is case insensitive";
+
+        assertEquals("replaced", expected, actual);
+    }
+
+
 
 
 
