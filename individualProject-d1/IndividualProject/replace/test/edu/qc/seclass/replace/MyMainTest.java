@@ -603,7 +603,73 @@ public class MyMainTest {
         assertEquals("replaced", expected, actual);
     }
 
+    /*
+   Test Case 84 		(Key = 2.2.4.3.2.3.4.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace sensitiveCase
+     */
+    @Test
+    public void replaceTest20() throws Exception{
+        String args[] = {"replace -i Hello hEllo -- file1.txt, file2.txt"};
+        Main.main(args);
 
+        String expected = "This is a hello test";
+        String actual = getFileContent(createInputFile1().getPath());
+
+        assertEquals("Found string!", expected, actual);
+
+    }
+
+    /*
+   Test Case 71 		(Key = 2.2.4.2.1.1.4.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -i
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace sensitiveCase
+     */
+    @Test
+    public void replaceTest21() throws Exception{
+        String args[] = {"replace -i", "theQuickBrownFoxJumpsOver", "TheQuickBrownFoxJumpsOver", "-- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "Howdy Bill, have you learned your abc and 123?\n" +
+                "It is important to know your abc and 123," +
+                "so you should study it\n" +
+                "and then repeat with me: abc and 123";
+        String actual = getFileContent(createInputFile3().getPath());
+
+        assertEquals("Found string!", expected, actual);
+
+    }
+
+    /*
+   Test Case 31 		(Key = 2.2.2.2.1.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test
+    public void replaceTest22(){
+        String args [] = {"replace -b caseInsensitive case -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "This is case insensitive";
+        String actual = "This is case insensitive";
+
+        assertEquals("replaced", expected, actual);
+    }
 
 
 
