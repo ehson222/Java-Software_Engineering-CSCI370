@@ -911,6 +911,160 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
    */
+    @Test ()
+    public void replaceTest34(){
+        String args [] = {"replace -f cccccccccCC c  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = null;
+
+        assertEquals(null, expected);
+    }
+
+    /*
+   Test Case 44 		(Key = 2.2.2.3.2.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace replaceFrom
+   */
+    @Test ()
+    public void replaceTest35(){
+        String args [] = {"replace -f cccccccccCC c  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "Cat car in a cab";
+
+        assertEquals("Cat car in a cab", expected);
+    }
+
+    /*
+    Test Case 45 		(Key = 2.2.2.3.3.1.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  lengthX
+    Parameter to                                    :  lengthX
+    Number of matches of the pattern in second file :  None
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+    public void replaceTest36(){
+        String args [] = {"replace -f cccccccccCC CatFromHell  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "CatFromHell is in my door.";
+
+        assertEquals("CatFromHell is in my door.", expected);
+    }
+
+    /*
+    Test Case 46 		(Key = 2.2.2.3.3.3.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  lengthX
+    Parameter to                                    :  lengthX
+    Number of matches of the pattern in second file :  Many
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+    public void replaceTest37(){
+        String args [] = {"replace -f cccccccccCC cowBoyBebop  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "cowBoyBebop is an anime.";
+
+        assertEquals("cowBoyBebop is an anime.", expected);
+    }
+
+    /*
+   Test Case 47 		(Key = 2.2.2.3.5.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceFrom
+   */
+    @Test ()
+    public void replaceTest38(){
+        String args [] = {"replace -f GodofWar GODOFWAR  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = " is a PS4 Game ";
+
+        assertEquals(" is a PS4 Game ", expected);
+    }
+
+    /*
+   Test Case 48 		(Key = 2.2.2.3.5.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test ()
+    public void replaceTest39(){
+        String args [] = {"replace -f GodofWar GODOFWAR  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "GODOFWAR is a PS4 game.";
+
+        assertEquals("GODOFWAR is a PS4 game.", expected);
+    }
+
+    /*
+   Test Case 49 		(Key = 2.2.2.3.6.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test ()
+    public void replaceTest40(){
+        String args [] = {"replace -f GODOFWAR godofwar  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "godofwar is a PS4 game.";
+
+        assertEquals("godofwar is a PS4 game.", expected);
+    }
+
+    /*
+   Test Case 67 		(Key = 2.2.3.3.5.1.3.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceTo
+   */
+    @Test ()
+    public void replaceTest41(){
+        String args [] = {"replace -l MetallicaX METALLICAX  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = " ";
+
+        assertEquals("Pattern not found!", expected, expected);
+    }
+
+
+
+
+
 
 
 
