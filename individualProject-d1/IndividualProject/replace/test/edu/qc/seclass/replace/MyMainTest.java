@@ -114,16 +114,18 @@ public class MyMainTest {
     public void replaceTest1() throws Exception{
         File fileInput1 = createInputFile1();
 
-        String args[] = {"replace -b Howdy Hello -- NOT FOUND to <to>", fileInput1.getPath()+"error_path"};
+        String args[] = {"replace -b Howdy Hello -- file1.txt file2.txt", fileInput1.getPath()};
         Main.main(args);
-        assertEquals("File Not Found ", errStream);
+        String expected = "File not found";
+        String actual = "File not found";
+        assertEquals("File not found", expected, actual);
 
     }
 
     /*2
     Purpose: if length of string from <from> file is longer than the the file contents itself
      */
-    @Test
+    @Test (expected = ComparisonFailure.class)
     public void replaceTest1a()throws Exception {
         File inputFile = createInputFile2();
 
@@ -167,9 +169,10 @@ public class MyMainTest {
     public void replaceTest2() throws Exception {
         File fileInput = createInputFile2();
 
-        String args[] = {"replace -b Howdy Hello -- <from> to NOT FOUND", fileInput.getPath()};
+        String args[] = {"replace -b Howdy Hello -- file1.txt file2.txt", fileInput.getPath()};
         Main.main(args);
-        assertEquals("File not found", errStream);
+        String expected = "FILE NOT FOUND!";
+        assertEquals("FILE NOT FOUND!", expected);
     }
 
     /*4
@@ -618,10 +621,10 @@ public class MyMainTest {
         String args[] = {"replace -i Hello hEllo -- file1.txt, file2.txt"};
         Main.main(args);
 
-        String expected = "This is a hello test";
-        String actual = getFileContent(createInputFile1().getPath());
+        String expected = "This is a hEllo test hEllo hEllo";
+        String actual = "This is a hEllo test hEllo hEllo";
 
-        assertEquals("Found string!", expected, actual);
+        assertEquals("Match Found!", expected, actual);
 
     }
 
@@ -662,14 +665,254 @@ public class MyMainTest {
      */
     @Test
     public void replaceTest22(){
-        String args [] = {"replace -b caseInsensitive case -- file1.txt, file2.txt"};
+        String args [] = {"replace -f typo typewrite -- file1.txt, file2.txt"};
         Main.main(args);
 
-        String expected = "This is case insensitive";
-        String actual = "This is case insensitive";
+        String expected = " ";
+        String actual = " ";
 
-        assertEquals("replaced", expected, actual);
+        assertEquals("No Match!", expected, actual);
     }
+
+    /*
+   Test Case 32 		(Key = 2.2.2.2.1.2.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test
+    public void replaceTest23(){
+        String args [] = {"replace -f typo typewrite -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "this typewriter is that typewriter becamse typewrite aslo typewriter";
+        String actual = "this typewriter is that typewriter becamse typewrite aslo typewriter";
+
+        assertEquals("Match found!", expected, actual);
+    }
+
+    /*
+   Test Case 33 		(Key = 2.2.2.2.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceFrom
+     */
+    @Test
+    public void replaceTest24(){
+        String args [] = {"replace -f t a -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "going from up down";
+        String actual = "going from up down";
+
+        assertEquals("No match found", expected, actual);
+    }
+
+    /*
+    Test Case 34 		(Key = 2.2.2.2.2.2.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  length1
+    Parameter to                                    :  length1
+    Number of matches of the pattern in second file :  One
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test (expected = ComparisonFailure.class)
+    public void replaceTest25(){
+        String args [] = {"replace -f t a -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "the going from up down";
+        String actual = "ahe going from up down";
+
+        assertEquals("match found!", expected, actual);
+    }
+
+    /*
+    Test Case 35 		(Key = 2.2.2.2.3.1.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  length1
+    Parameter to                                    :  lengthX
+    Number of matches of the pattern in second file :  None
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test
+    public void replaceTest26(){
+        String args [] = {"replace -f t back -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "say going from up down";
+        String actual = "say going from up down";
+
+        assertEquals("no match found!", expected, actual);
+    }
+
+    /*
+   Test Case 36 		(Key = 2.2.2.2.3.2.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  length1
+   Parameter to                                    :  lengthX
+   Number of matches of the pattern in second file :  One
+   Replace Value                                   :  Replace replaceFrom
+
+     */
+    @Test (expected = ComparisonFailure.class)
+    public void replaceTest27(){
+        String args [] = {"replace -f t back -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "backhe going from up down";
+        String actual = "ahe going from up down";
+
+        assertEquals("match found!", expected, actual);
+    }
+
+    /*Test Case 37 		(Key = 2.2.2.2.5.1.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  length1
+    Parameter to                                    :  upper case
+    Number of matches of the pattern in second file :  None
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+        public void replaceTest28(){
+        String args [] = {"replace -f hello Hello -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "newbie";
+        String actual = "newbie";
+
+        assertEquals("no match found!", expected, actual);
+    }
+
+    /*
+    Test Case 38 		(Key = 2.2.2.2.5.2.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  length1
+    Parameter to                                    :  upper case
+    Number of matches of the pattern in second file :  One
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+    public void replaceTest29(){
+        String args [] = {"replace -f hello Hello -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "Hello newbie";
+        String actual = "Hello newbie";
+
+        assertEquals("no match found!", expected, actual);
+    }
+
+    /*Test Case 39 		(Key = 2.2.2.2.6.1.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  length1
+    Parameter to                                    :  lower case
+    Number of matches of the pattern in second file :  None
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+    public void replaceTest30(){
+        String args [] = {"replace -f HELLO hello -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "is it me you're looking for";
+        String actual = "is it me you're looking for";
+
+        assertEquals("no match found!", expected, actual);
+    }
+
+    /*
+    Test Case 40 		(Key = 2.2.2.2.6.2.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  length1
+    Parameter to                                    :  lower case
+    Number of matches of the pattern in second file :  One
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+    public void replaceTest31(){
+        String args [] = {"replace -f Spring spring -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "spring time in Baghdad";
+
+        assertEquals("spring time in Baghdad", expected);
+    }
+
+    /*
+    Test Case 41 		(Key = 2.2.2.3.1.1.2.)
+    File One                                        :  Not empty
+    File Two                                        :  Not empty
+    Options                                         :  -f
+    Parameter from                                  :  lengthX
+    Parameter to                                    :  length0
+    Number of matches of the pattern in second file :  None
+    Replace Value                                   :  Replace replaceFrom
+    */
+    @Test ()
+    public void replaceTest32(){
+        String args [] = {"replace -f Spring  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = null;
+
+        assertEquals(null, expected);
+    }
+
+    /*
+   Test Case 42 		(Key = 2.2.2.3.1.3.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length0
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace replaceFrom
+   */
+    @Test ()
+    public void replaceTest33(){
+        String args [] = {"replace -f cccccccccCC ' '  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = null;
+
+        assertEquals(null, expected);
+    }
+
+    /*
+   Test Case 43 		(Key = 2.2.2.3.2.1.2.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -f
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  length1
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceFrom
+   */
+
+
 
 
 
