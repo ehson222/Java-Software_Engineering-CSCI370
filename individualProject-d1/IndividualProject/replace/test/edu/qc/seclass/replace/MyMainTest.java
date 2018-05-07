@@ -1176,7 +1176,31 @@ public class MyMainTest {
         assertEquals("File cannot be read", expected);
     }
 
+    /*
+    Purpose:  when replace is not entered in the argument to replace from, to
+     */
+    @Test
+    public void replaceTest49()
+    {
+        String args[] ={"-b Bill William -- file1.txt file2.txt"};
+        Main.main(args);
 
+        String expected = "-b Command not found.";
+        assertEquals("-b Command not found.", expected);
+    }
+
+    /*
+    Purpose:  No 'from' and 'to' file entered.
+     */
+    @Test
+    public void replaceTest50()
+    {
+        String args[] = {"replace -b Bill William "};
+        Main.main(args);
+
+        String expected = "replace: Invalid Arguments.";
+        assertEquals("replace: Invalid Arguments.", expected);
+    }
 
 
 
