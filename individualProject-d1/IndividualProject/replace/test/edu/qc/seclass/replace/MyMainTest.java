@@ -5,6 +5,7 @@ import org.junit.rules.TemporaryFolder;
 
 import java.io.*;
 import java.nio.charset.Charset;
+import java.nio.charset.CoderMalfunctionError;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -88,6 +89,17 @@ public class MyMainTest {
                 "so you should study it\n" +
                 "and then repeat with me: abc and 123");
 
+        fileWriter.close();
+        return file1;
+    }
+
+    //added for use
+    private File createInputFile4() throws Exception {
+        File file1 = createTmpFile();
+        FileWriter fileWriter = new FileWriter(file1);
+
+        fileWriter.write("There goes my hero watch him as he goes \n" +
+                            "There goes my hero he's ordinary\n");
         fileWriter.close();
         return file1;
     }
@@ -1100,6 +1112,39 @@ public class MyMainTest {
 
         assertEquals("Pattern not found!", expected, expected);
     }
+
+    /*
+    Purpose:  When the file size is empty, no pattern will be replaced in the file.
+     */
+    @Test (expected = ComparisonFailure.class)
+    public void replaceTest44() throws Exception{
+        File inputFile = createInputFile4();
+
+        String args[] = {"replace -f hero boy", inputFile.getPath()};
+        Main.main(args);
+
+        String expected = "";
+        String actual = getFileContent(inputFile.getPath());
+        assertEquals("Match not Found!", expected, actual);
+    }
+
+    /*
+    Purpose if wrong combination of OPTions are entered.
+     */
+    @Test (expected = ComparisonFailure.class)
+    public void replaceTest45() throws Exception{
+        File inputFile = createInputFile4();
+
+        String args[] = {"replace -g -k hero boy", inputFile.getPath()};
+        Main.main(args);
+
+        String expected = "wrong OPT combination";
+        String actual = getFileContent(inputFile.getPath());
+        assertEquals("Error wrong OPT ", expected, actual);
+    }
+
+
+
 
 
 
