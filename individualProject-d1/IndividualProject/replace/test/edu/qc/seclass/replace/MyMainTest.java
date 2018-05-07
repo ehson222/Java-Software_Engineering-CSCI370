@@ -1061,6 +1061,49 @@ public class MyMainTest {
         assertEquals("Pattern not found!", expected, expected);
     }
 
+    /*
+   Test Case 68 		(Key = 2.2.3.3.5.3.3.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  upper case
+   Number of matches of the pattern in second file :  Many
+   Replace Value                                   :  Replace replaceTo
+     */
+    @Test ()
+    public void replaceTest42(){
+        String args [] = {"replace -l MetallicaX METALLICAX  -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "METALLICAX is a band ";
+
+        assertEquals("Pattern not found!", expected, expected);
+    }
+
+    /*
+   Test Case 69 		(Key = 2.2.3.3.6.1.3.)
+   File One                                        :  Not empty
+   File Two                                        :  Not empty
+   Options                                         :  -l
+   Parameter from                                  :  lengthX
+   Parameter to                                    :  lower case
+   Number of matches of the pattern in second file :  None
+   Replace Value                                   :  Replace replaceTo
+   */
+    @Test ()
+    public void replaceTest43(){
+        String args [] = {"replace -l UNIBALL SIGNO uniball signo -- file1.txt, file2.txt"};
+        Main.main(args);
+
+        String expected = "uniball signo is a pen ";
+
+        assertEquals("Pattern not found!", expected, expected);
+    }
+
+
+
+
 
 
 

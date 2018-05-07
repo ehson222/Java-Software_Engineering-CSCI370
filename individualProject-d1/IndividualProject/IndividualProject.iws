@@ -18,8 +18,8 @@
       <file leaf-file-name="MyMainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/replace/test/edu/qc/seclass/replace/MyMainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1227">
-              <caret line="1061" column="5" lean-forward="true" selection-start-line="1061" selection-start-column="5" selection-end-line="1061" selection-end-column="5" />
+            <state relative-caret-position="1481">
+              <caret line="1101" column="5" lean-forward="true" selection-start-line="1101" selection-start-column="5" selection-end-line="1101" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -109,7 +109,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MyMainTest.replaceTest41">
+  <component name="RunManager" selected="JUnit.MyMainTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -145,31 +145,6 @@
       <option name="MAIN_CLASS_NAME" value="edu.qc.seclass.replace.MyMainTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="MyMainTest.replaceTest37" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="edu.qc.seclass.replace.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="replace" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="edu.qc.seclass.replace" />
-      <option name="MAIN_CLASS_NAME" value="edu.qc.seclass.replace.MyMainTest" />
-      <option name="METHOD_NAME" value="replaceTest37" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -219,6 +194,56 @@
       <option name="PACKAGE_NAME" value="edu.qc.seclass.replace" />
       <option name="MAIN_CLASS_NAME" value="edu.qc.seclass.replace.MyMainTest" />
       <option name="METHOD_NAME" value="replaceTest41" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MyMainTest.replaceTest42" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="edu.qc.seclass.replace.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="replace" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="edu.qc.seclass.replace" />
+      <option name="MAIN_CLASS_NAME" value="edu.qc.seclass.replace.MyMainTest" />
+      <option name="METHOD_NAME" value="replaceTest42" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MyMainTest.replaceTest43" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="edu.qc.seclass.replace.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="replace" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="edu.qc.seclass.replace" />
+      <option name="MAIN_CLASS_NAME" value="edu.qc.seclass.replace.MyMainTest" />
+      <option name="METHOD_NAME" value="replaceTest43" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -291,18 +316,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest37" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MyMainTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest38" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest41" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MyMainTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest38" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest41" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest42" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest43" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest41" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest38" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MyMainTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest37" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MyMainTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest43" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest42" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest41" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MyMainTest.replaceTest38" />
       </list>
     </recent_temporary>
   </component>
@@ -332,11 +359,8 @@
     <history-entry file="MyMainTest - 2018.05.06 at 19h 22m 11s.xml">
       <configuration name="MyMainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyMainTest_replaceTest37 - 2018.05.06 at 19h 20m 40s.xml">
-      <configuration name="MyMainTest.replaceTest37" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyMainTest_replaceTest37 - 2018.05.06 at 19h 20m 59s.xml">
-      <configuration name="MyMainTest.replaceTest37" configurationId="JUnit" />
+    <history-entry file="MyMainTest - 2018.05.06 at 19h 55m 08s.xml">
+      <configuration name="MyMainTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MyMainTest_replaceTest38 - 2018.05.06 at 19h 24m 06s.xml">
       <configuration name="MyMainTest.replaceTest38" configurationId="JUnit" />
@@ -346,6 +370,15 @@
     </history-entry>
     <history-entry file="MyMainTest_replaceTest41 - 2018.05.06 at 19h 49m 24s.xml">
       <configuration name="MyMainTest.replaceTest41" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyMainTest_replaceTest41 - 2018.05.06 at 19h 50m 37s.xml">
+      <configuration name="MyMainTest.replaceTest41" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyMainTest_replaceTest42 - 2018.05.06 at 19h 53m 05s.xml">
+      <configuration name="MyMainTest.replaceTest42" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyMainTest_replaceTest43 - 2018.05.06 at 19h 55m 05s.xml">
+      <configuration name="MyMainTest.replaceTest43" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -360,7 +393,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1835514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -431,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/replace/test/edu/qc/seclass/replace/MyMainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1227">
-          <caret line="1061" column="5" lean-forward="true" selection-start-line="1061" selection-start-column="5" selection-end-line="1061" selection-end-column="5" />
+        <state relative-caret-position="1481">
+          <caret line="1101" column="5" lean-forward="true" selection-start-line="1101" selection-start-column="5" selection-end-line="1101" selection-end-column="5" />
           <folding />
         </state>
       </provider>
