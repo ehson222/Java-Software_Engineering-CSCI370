@@ -116,7 +116,7 @@ public class MyMainTest {
 
     //END MAY NEED TEST CODE
 
-    //START TEST CASES some are  from Category-Partition.txt.tsl
+    //START TEST CASES.  SOME ARE from Category-Partition.txt.tsl
 
     /*1
     Test Case 4  		<error>
@@ -149,13 +149,7 @@ public class MyMainTest {
                 "...\n" +
                 "and says \"howdy Bill\" twice... the Avengers was a great movie!  -- file1.txt file2.txt "};
 
-        String expected = "\"Howdy Bill,\\n\" +\n" +
-                "               \"This is another test file for the replace utility\\n\" +\n" +
-                "                \"that contains a list:\\n\" +\n" +
-                "                \"-a) Item 1\\n\" +\n" +
-                "                \"-b) Item 2\\n\" +\n" +
-                "                \"...\\n\" +\n" +
-                "                \"and says \\\"howdy Bill\\\" twice\"";
+        String expected = "FROM file is longer";
 
         String actual = getFileContent(inputFile.getPath());
 
@@ -183,8 +177,8 @@ public class MyMainTest {
 
         String args[] = {"replace -b Howdy Hello -- file1.txt file2.txt", fileInput.getPath()};
         Main.main(args);
-        String expected = "FILE NOT FOUND!";
-        assertEquals("FILE NOT FOUND!", expected);
+        String expected = "file1.txt not found";
+        assertEquals("file1.txt not found", expected);
     }
 
     /*4
@@ -194,9 +188,9 @@ public class MyMainTest {
     public void replaceTest2a(){
         String args[] = {"replace -b Howdy Hello -- file1.txt file2.txt"};
         Main.main(args);
-        String expected = "File 2 is empty";
-        String actual = "File 2 is empty";
-        assertEquals("File 2 not found", expected, actual);
+        String expected = "Empty file2.txt";
+        String actual = "Empty file2.txt";
+        assertEquals("<to> file empty", expected, actual);
     }
 
     //5 Purpose:  OPTION (opt) is not found
@@ -1144,12 +1138,38 @@ public class MyMainTest {
     }
 
     /*
+    Purpose:  When file 1 is a .txt file and file 2 is NOT a .txt file
+     */
+    @Test
+    public void replaceTest46(){
+
+        String args[] = {"replace -b Bill William -- file1.txt file2.xls"};
+        Main.main(args);
+
+        String expected = "File 2 cannot be read, invalid file format";
+        assertEquals("File 2 cannot be read, invalid file format", expected);
+    }
+
+    /*
+    Purpose:  When file 1 is NOT a .txt file and file 2 is.
+     */
+    @Test
+    public void replaceTest47(){
+
+        String args[] = {"replace -b Bill William -- file1.xls file2.txt"};
+        Main.main(args);
+
+        String expected = "File 2 cannot be read, invalid file format";
+        assertEquals("File 2 cannot be read, invalid file format", expected);
+    }
+
+    /*
     Purpose:  When file arguments are not .txt files.
      */
     @Test
-    public void replaceTest46() throws Exception{
+    public void replaceTest48(){
 
-        String args[] = {"replace -g -k Bill William -- file1.xlsx file2.xlsl"};
+        String args[] = {"replace -b Bill William -- file1.xlsx file2.xlsl"};
         Main.main(args);
 
         String expected = "File cannot be read";
