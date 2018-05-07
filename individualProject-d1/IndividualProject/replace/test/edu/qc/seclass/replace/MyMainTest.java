@@ -1143,7 +1143,18 @@ public class MyMainTest {
         assertEquals("Error wrong OPT ", expected, actual);
     }
 
+    /*
+    Purpose:  When file arguments are not .txt files.
+     */
+    @Test
+    public void replaceTest46() throws Exception{
 
+        String args[] = {"replace -g -k Bill William -- file1.xlsx file2.xlsl"};
+        Main.main(args);
+
+        String expected = "File cannot be read";
+        assertEquals("File cannot be read", expected);
+    }
 
 
 

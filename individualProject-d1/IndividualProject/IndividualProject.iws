@@ -18,8 +18,8 @@
       <file leaf-file-name="MyMainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/replace/test/edu/qc/seclass/replace/MyMainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+            <state relative-caret-position="1704">
+              <caret line="1151" column="65" lean-forward="false" selection-start-line="1151" selection-start-column="65" selection-end-line="1151" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -472,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/replace/test/edu/qc/seclass/replace/MyMainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+        <state relative-caret-position="1704">
+          <caret line="1151" column="65" lean-forward="false" selection-start-line="1151" selection-start-column="65" selection-end-line="1151" selection-end-column="65" />
           <folding />
         </state>
       </provider>
