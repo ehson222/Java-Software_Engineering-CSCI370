@@ -1125,7 +1125,7 @@ public class MyMainTest {
     /*
     Purpose:  When file 1 is a .txt file and file 2 is NOT a .txt file
      */
-    @Test (expected = NullPointerException.class)
+    @Test //(expected = NullPointerException.class)
     public void replaceTest46()throws Exception{
 
         String args[] = {"-b", "Bill", "William", "--", "file1.txt", "file2.xls"};
@@ -1138,7 +1138,7 @@ public class MyMainTest {
     /*
     Purpose:  When file 1 is NOT a .txt file and file 2 is.
      */
-    @Test (expected = NullPointerException.class)
+    @Test //(expected = NullPointerException.class)
     public void replaceTest47()throws Exception{
 
         String args[] = {"-b", "Bill", "William", "--", "file1.xls", "file2.txt"};

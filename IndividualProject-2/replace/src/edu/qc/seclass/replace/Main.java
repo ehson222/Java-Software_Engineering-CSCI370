@@ -98,10 +98,17 @@ public class Main {
 
     }
 
-    //TODO
     public void replaceCaseInsensitive(String fromString, String toString, File fileToConvert) throws IOException {
+        String file = getFileContent(fileToConvert.toString());
 
+        Pattern pattern = Pattern.compile(fromString, Pattern.CASE_INSENSITIVE);
+        Matcher match = pattern.matcher(file);
 
+        String replaceStuff = match.replaceAll(toString);
+
+        FileWriter fileWriter = new FileWriter(fileToConvert, false);
+        fileWriter.write(replaceStuff);
+        fileWriter.close();
 
     }
 
