@@ -1,6 +1,5 @@
 package edu.qc.seclass.replace;
 
-
 import org.junit.rules.TemporaryFolder;
 
 import java.io.File;
@@ -18,19 +17,23 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 public class Main {
 
+
+
     public static void main(String[] args){
         // write your code here
 
+        //Replace replace = new Replace();
         Main newMain = new Main();
 
-        System.out.println("Arguments !!!! " + args.length);
+        System.out.println("Wrong Arguments: " + args.length);
 
 
-        //Get number of arguments before --
+        //the number of arguments before ---
         for (int i = 0; i < args.length; i++) {
             if (args.length < 4) {
                 newMain.usage();
             } else if (args[i].equals("--")) {
+
                 Replace.numberOfDoubleDash++;
                 Replace.delimiterPosition = i;
                 Replace.trueReplaceOptions = i;
@@ -89,15 +92,17 @@ public class Main {
         //temporaryFolder.create();
         String targetFileName = sourceFile.getName() + ".bck";
         File targetFile = new File(targetFileName);
-        String sourcepathDir = sourceFile.toPath().toString() + ".bck";
-        Path pathtest = Paths.get(sourcepathDir);
+        String sourcePathDir = sourceFile.toPath().toString() + ".bck";
+        Path pathTest = Paths.get(sourcePathDir);
 
-
-        Files.copy(sourceFile.toPath(), pathtest, REPLACE_EXISTING);
+        Files.copy(sourceFile.toPath(), pathTest, REPLACE_EXISTING);
         return targetFile;
 
     }
 
+    /*
+     Reference:  http://tutorials.jenkov.com/java-regex/pattern.html
+    */
     public void replaceCaseInsensitive(String fromString, String toString, File fileToConvert) throws IOException {
         String file = getFileContent(fileToConvert.toString());
 
@@ -112,26 +117,59 @@ public class Main {
 
     }
 
-    //TODO
     public void firstReplaceForAll(String fromString, String toString, File fileToConvert) throws IOException {
+        String file = getFileContent(fileToConvert.toString());
 
+        fromString = "(?i)" + fromString;
+        String replaceContent = file.replaceFirst(fromString, toString);
 
+        FileWriter fileWriter = new FileWriter(fileToConvert, false);
+        fileWriter.write(replaceContent);
+        fileWriter.close();
 
     }
 
-    //TODO
+
     public void replaceCaseSensitive(String fromString, String toString, File fileToConvert) throws IOException {
+        String file = getFileContent(fileToConvert.toString());
+
+        String replacedContent = file.replaceAll(fromString, toString);
+
+        FileWriter fileWriter = new FileWriter(fileToConvert, false);
+        fileWriter.write(replacedContent);
+        fileWriter.close();
 
 
     }
 
-    //TODO
     public void replaceFirstOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
+        String file = getFileContent(fileToConvert.toString());
+
+        String replacedContent = file.replaceAll(fromString, toString);
+
+        FileWriter newFile = new FileWriter(fileToConvert, false);
+        newFile.write(replacedContent);
+        newFile.close();
 
     }
 
-    //TODO
     public void replaceLastOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
+
+        String replaceFromString = fromString;
+        String replaceToString = toString;
+
+        String fileContent = getFileContent(fileToConvert.toString());
+
+        String replacedContent = fileContent;
+
+        int lastIndex = fileContent.lastIndexOf(replaceFromString);
+        if (lastIndex >= 0) {
+            replacedContent = fileContent.substring(0, lastIndex) + replaceToString + fileContent.substring(lastIndex + replaceFromString.length());
+        }
+
+        FileWriter newFile = new FileWriter(fileToConvert, false);
+        newFile.write(replacedContent);
+        newFile.close();
 
 
     }

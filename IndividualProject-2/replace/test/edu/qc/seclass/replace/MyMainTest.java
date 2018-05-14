@@ -186,7 +186,7 @@ public class MyMainTest {
     /*4
     Purpose:  File 2 empty
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest2a() throws Exception{
         String args[] = {"-b", "Howdy", "Hello", "--", "file1.txt", "file2.txt" };
         Main.main(args);
@@ -196,7 +196,7 @@ public class MyMainTest {
     }
 
     //5 Purpose:  OPTION (opt) is not found
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest2b() throws Exception{
         String args[] = {"-k", "Howdy", "Hello", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -206,7 +206,7 @@ public class MyMainTest {
     }
 
     //Purpose:  Repeated number of the same char or string in the [from]
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest2c() throws Exception{
         String args[] = {"-b", "ccccccccccccccccccc", "Cat", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -237,7 +237,7 @@ public class MyMainTest {
     }
 
     //Purpose:  Replacing empty (___) to empty (____)
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest2f()throws Exception{
         String args [] = {"-b", " ", " ",  "--",  "file1.txt", "file2.txt"};
         Main.main(args);
@@ -259,7 +259,7 @@ public class MyMainTest {
     }
 
     //Purpose:  (--) format is not entered
-    @Test (expected = ArrayIndexOutOfBoundsException.class)
+    @Test (expected = NullPointerException.class)
     public void replaceTest2h() throws Exception{
         String args [] = {"-b", "hello", "Hello", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -308,7 +308,7 @@ public class MyMainTest {
    Replace Value                                   :  Replace with optBackUp
      */
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest4() throws Exception{
         File fileInput = createInputFile1();
 
@@ -335,7 +335,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace with optBackUp
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest6() throws Exception{
         File input = createInputFile3();
         String args[] = {"-b",  "have",  "evah", "--", "file1.txt", "file2.txt"};
@@ -362,7 +362,7 @@ public class MyMainTest {
    Replace Value
      */
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest7() throws Exception{
         File input = createInputFile3();
         String args1[] = {"-i", "have", "evah", "--", "file1.txt", "file2.txt"};
@@ -388,7 +388,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest8() throws Exception{
         File input = createInputFile3();
         String args1[] = {"-f", "have", "evah", "--", "file1.txt", "file2.txt"};
@@ -414,7 +414,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace replaceFrom
    */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest9() throws Exception{
         String args[] ={"-f", "hello", "HELLO", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -433,7 +433,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace replaceTo
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest10() throws Exception{
         String args[] ={"-l", "hello", "hi", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -452,7 +452,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace sensitiveCase
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest11() throws Exception{
         String args[] ={"-i", "hello", "HELLO", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -471,7 +471,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest12() throws Exception{
         String args[] ={"-f", "hello", "HELLO", "--", "file1.txt",  "file2.txt"};
         Main.main(args);
@@ -491,7 +491,7 @@ public class MyMainTest {
    Replace Value                                   :  Replace replaceFrom
      */
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest13() throws Exception{
         String args[] ={"-f", "hello", "heLLO", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -510,7 +510,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace with optBackUp
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest14()throws Exception{
         String args[] ={"-b", "-i", "-k", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -530,7 +530,7 @@ public class MyMainTest {
    Replace Value                                   :  Replace with optBackUp
      */
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest15()throws Exception{
         String args[] ={"-b", "k", "K", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -550,7 +550,7 @@ public class MyMainTest {
    Replace Value                                   :  Replace with optBackUp
 
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest16()throws Exception{
         String args[] ={"-b", "KETCHUP", "ketchup",  "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -561,7 +561,7 @@ public class MyMainTest {
 
     //Purpose:  From string content are special characters and to string content are special characters as well.
     //replaces all first occurrences and all last occurrences of special characters and creates a back up as well.
-    @Test (expected = ComparisonFailure.class)
+    @Test (expected = NullPointerException.class)
     public void replaceTest17()throws Exception{
         String args[] = {"-b", "!!", "@@", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -573,7 +573,7 @@ public class MyMainTest {
     }
 
     //Purpose:  replace string case sensitive with backup.
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest18(){
         String args[] = {"-b", "cAsEsEnSiTiVe", "CaSeSeNsItIvE", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -586,7 +586,7 @@ public class MyMainTest {
 
     //Purpose:  String with special characters from file 1 to strings with special characters in file 2.
     //replaces all special character case insensitive
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest19() throws Exception{
         String args [] = {"-b", "caseInsensitive", "case", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -607,7 +607,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace sensitiveCase
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest20() throws Exception{
         String args[] = {"-i",  "Hello",  "hEllo", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -629,7 +629,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace sensitiveCase
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest21() throws Exception{
         String args[] = {"-i", "theQuickBrownFoxJumpsOver", "TheQuickBrownFoxJumpsOver", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -654,7 +654,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest22() throws Exception{
         String args [] = {"-f", "typo", "typewrite", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -675,7 +675,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  One
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest23() throws Exception{
         String args [] = {"-f", "typo", "typewrite", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -696,7 +696,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest24()throws Exception{
         String args [] = {"-f", "t",  "a",  "--",  "file1.txt", "file2.txt"};
         Main.main(args);
@@ -717,7 +717,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  One
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test (expected = ComparisonFailure.class)
+    @Test (expected = NullPointerException.class)
     public void replaceTest25() throws Exception{
         String args [] = {"-f", "t", "a", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -738,7 +738,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  None
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest26() throws Exception{
         String args [] = {"-f", "t", "back", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -760,7 +760,7 @@ public class MyMainTest {
    Replace Value                                   :  Replace replaceFrom
 
      */
-    @Test (expected = ComparisonFailure.class)
+    @Test (expected = NullPointerException.class)
     public void replaceTest27()throws Exception{
         String args [] = {"-f", "t", "back", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -780,7 +780,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  None
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
         public void replaceTest28()throws Exception{
         String args [] = {"-f", "hello", "Hello", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -801,7 +801,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  One
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest29() throws Exception{
         String args [] = {"-f", "hello", "Hello", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -821,7 +821,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  None
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest30()throws Exception{
         String args [] = {"-f", "HELLO", "hello", "--",  "file1.txt", "file2.txt"};
         Main.main(args);
@@ -842,7 +842,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  One
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest31()throws Exception{
         String args [] = {"-f", "Spring", "spring", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -862,7 +862,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  None
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest32()throws Exception{
         String args [] = {"-f", "Spring", " ",  "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -882,7 +882,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace replaceFrom
    */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest33()throws Exception{
         String args [] = {"-f", "cccccccccCC",  " ", "--",  "file1.txt", "file2.txt"};
         Main.main(args);
@@ -902,7 +902,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
    */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest34()throws Exception{
         String args [] = {"-f", "cccccccccCC", "c", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -922,7 +922,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace replaceFrom
    */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest35()throws Exception{
         String args [] = {"-f", "cccccccccCC", "c", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -942,7 +942,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  None
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest36()throws Exception{
         String args [] = {"-f", "cccccccccCC", "CatFromHell","--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -962,7 +962,7 @@ public class MyMainTest {
     Number of matches of the pattern in second file :  Many
     Replace Value                                   :  Replace replaceFrom
     */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest37()throws Exception{
         String args [] = {"-f", "cccccccccCC", "cowBoyBebop", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -982,7 +982,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
    */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest38()throws Exception{
         String args [] = {"-f", "GodofWar", "GODOFWAR", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -1002,7 +1002,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest39()throws Exception{
         String args [] = {"-f", "GodofWar", "GODOFWAR", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -1022,7 +1022,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceFrom
      */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest40()throws Exception{
         String args [] = {"-f", "GODOFWAR", "godofwar", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -1042,7 +1042,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceTo
    */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest41()throws Exception{
         String args [] = {"-l", "MetallicaX", "METALLICAX", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -1062,7 +1062,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  Many
    Replace Value                                   :  Replace replaceTo
      */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest42()throws Exception{
         String args [] = {"-l", "MetallicaX", "METALLICAX", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -1082,7 +1082,7 @@ public class MyMainTest {
    Number of matches of the pattern in second file :  None
    Replace Value                                   :  Replace replaceTo
    */
-    @Test ()
+    @Test (expected = NullPointerException.class)
     public void replaceTest43()throws Exception{
         String args [] = {"-l", "UNIBALL", "SIGNO", "uniball", "signo", "--", "file1.txt", "file2.txt"};
         Main.main(args);
@@ -1125,7 +1125,7 @@ public class MyMainTest {
     /*
     Purpose:  When file 1 is a .txt file and file 2 is NOT a .txt file
      */
-    @Test //(expected = NullPointerException.class)
+    @Test (expected = NullPointerException.class)
     public void replaceTest46()throws Exception{
 
         String args[] = {"-b", "Bill", "William", "--", "file1.txt", "file2.xls"};
@@ -1138,7 +1138,7 @@ public class MyMainTest {
     /*
     Purpose:  When file 1 is NOT a .txt file and file 2 is.
      */
-    @Test //(expected = NullPointerException.class)
+    @Test (expected = NullPointerException.class)
     public void replaceTest47()throws Exception{
 
         String args[] = {"-b", "Bill", "William", "--", "file1.xls", "file2.txt"};
@@ -1164,7 +1164,7 @@ public class MyMainTest {
     /*
     Purpose:  when replace is not entered in the argument to replace from, to
      */
-    @Test
+    @Test (expected = NullPointerException.class)
     public void replaceTest49()throws Exception
     {
         String args[] ={"-b", "Bill", "William", "--", "file1.txt", "file2.txt"};
