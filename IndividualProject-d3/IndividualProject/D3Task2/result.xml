@@ -1,0 +1,501 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<coverage
+        xmlns='http://java.sun.com/jcov/namespace'
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xsi:schemaLocation='http://java.sun.com/jcov/namespace coverage.xsd'>
+
+	<head>
+		<property name='coverage.generator.args' val=''/>
+		<property name='coverage.generator.mode' val='BRANCH'/>
+		<property name='coverage.generator.internal' val='include'/>
+		<property name='coverage.generator.include' val=''/>
+		<property name='coverage.generator.exclude' val=''/>
+		<property name='coverage.generator.caller_include' val='.*'/>
+		<property name='coverage.generator.caller_exclude' val=''/>
+		<property name='coverage.created.date' val='2017-04-15'/>
+		<property name='coverage.created.time' val='05:15:16'/>
+		<property name='coverage.generator.fullversion' val='2.0os.beta-1 built: 13 November 2016'/>
+		<property name='coverage.generator.name' val='jcov'/>
+		<property name='coverage.generator.version' val='2.0'/>
+		<property name='coverage.spec.version' val='1.3'/>
+		<property name='java.runtime.version' val='1.8.0_112-b15'/>
+		<property name='java.version' val='1.8.0_112'/>
+		<property name='os.arch' val='amd64'/>
+		<property name='os.name' val='Windows 10'/>
+		<property name='os.version' val='10.0'/>
+		<property name='user.name' val='Erin'/>
+		<property name='dynamic.collected' val='false'/>
+		<property name='id.count' val='126'/>
+	</head>
+	<package name="edu.gatech.seclass.replace">
+		<class name="Main" supername="java/lang/Object" checksum="559899637" source="Main.java" flags=' public'>
+			<meth name="&lt;init&gt;" vmsig="()V" flags=' public' access="1" cons="true" length="5">
+				<bl s="0" e="4">
+					<methenter s="0" e="4" id="0" count="66"/>
+					<exit s="4" e="4" opcode="return"/>
+				</bl>
+				<lt>0=13;</lt>
+			</meth>
+			<meth name="main" vmsig="([Ljava/lang/String;)V" flags=' public static' access="9" length="283">
+				<bl s="0" e="11">
+					<methenter s="0" e="11" id="1" count="66"/>
+					<br s="9" e="11">
+						<cond s="18" e="21" id="2" count="66" val="true"/>
+						<cond s="12" e="17" id="3" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="12" e="17">
+					<br s="15" e="17">
+						<cond s="22" e="55" id="4" count="0" val="true"/>
+						<cond s="18" e="21" id="5" count="190" val="false"/>
+					</br>
+				</bl>
+				<bl s="18" e="21">
+					<exit s="21" e="21" opcode="return"/>
+				</bl>
+				<bl s="22" e="55">
+				</bl>
+				<bl s="56" e="63">
+					<fall s="56" e="63" id="34" count="26"/>
+					<br s="61" e="63">
+						<cond s="267" e="273" id="6" count="63" val="true"/>
+						<cond s="64" e="68" id="7" count="127" val="false"/>
+					</br>
+				</bl>
+				<bl s="64" e="68">
+					<br s="66" e="68">
+						<cond s="267" e="273" id="8" count="64" val="true"/>
+						<cond s="69" e="123" id="9" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="69" e="123">
+					<switch s="83" e="123">
+						<default s="257" e="260" id="10" count="2"/>
+						<case s="135" e="145" id="11" count="23" val="102"/>
+						<case s="124" e="134" id="12" count="26" val="105"/>
+						<case s="146" e="163" id="13" count="7" val="119"/>
+						<case s="204" e="221" id="14" count="5" val="120"/>
+					</switch>
+				</bl>
+				<bl s="124" e="134">
+					<goto s="132" e="134">
+						<tg s="261" e="266" id="15" count="0"/>
+					</goto>
+				</bl>
+				<bl s="135" e="145">
+					<goto s="143" e="145">
+						<tg s="261" e="266" id="16" count="23"/>
+					</goto>
+				</bl>
+				<bl s="146" e="163">
+					<br s="161" e="163">
+						<cond s="167" e="178" id="17" count="23" val="true"/>
+						<cond s="164" e="166" id="18" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="164" e="166">
+					<goto s="164" e="166">
+						<tg s="261" e="266" id="19" count="26"/>
+					</goto>
+				</bl>
+				<bl s="167" e="178">
+					<br s="176" e="178">
+						<cond s="182" e="203" id="20" count="26" val="true"/>
+						<cond s="179" e="181" id="21" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="179" e="181">
+					<goto s="179" e="181">
+						<tg s="261" e="266" id="22" count="5"/>
+					</goto>
+				</bl>
+				<bl s="182" e="203">
+					<goto s="201" e="203">
+						<tg s="261" e="266" id="23" count="5"/>
+					</goto>
+				</bl>
+				<bl s="204" e="221">
+					<br s="219" e="221">
+						<cond s="225" e="236" id="24" count="0" val="true"/>
+						<cond s="222" e="224" id="25" count="7" val="false"/>
+					</br>
+				</bl>
+				<bl s="222" e="224">
+					<goto s="222" e="224">
+						<tg s="261" e="266" id="26" count="7"/>
+					</goto>
+				</bl>
+				<bl s="225" e="236">
+					<br s="234" e="236">
+						<cond s="240" e="256" id="27" count="0" val="true"/>
+						<cond s="237" e="239" id="28" count="2" val="false"/>
+					</br>
+				</bl>
+				<bl s="237" e="239">
+					<goto s="237" e="239">
+						<tg s="261" e="266" id="29" count="2"/>
+					</goto>
+				</bl>
+				<bl s="240" e="256">
+					<goto s="254" e="256">
+						<tg s="261" e="266" id="30" count="0"/>
+					</goto>
+				</bl>
+				<bl s="257" e="260">
+					<exit s="260" e="260" opcode="return"/>
+				</bl>
+				<bl s="261" e="266">
+					<goto s="264" e="266">
+						<tg s="56" e="63" id="31" count="0"/>
+					</goto>
+				</bl>
+				<bl s="267" e="273">
+					<br s="271" e="273">
+						<cond s="278" e="282" id="32" count="64" val="true"/>
+						<cond s="274" e="277" id="33" count="23" val="false"/>
+					</br>
+				</bl>
+				<bl s="274" e="277">
+					<exit s="277" e="277" opcode="return"/>
+				</bl>
+				<bl s="278" e="282">
+					<exit s="282" e="282" opcode="return"/>
+				</bl>
+				<lt>0=17;8=19;18=21;21=22;22=25;32=26;42=27;52=29;54=30;56=32;69=34;124=36;129=37;132=38;135=40;140=41;143=42;146=44;151=45;154=46;164=48;167=50;179=51;182=53;185=54;190=55;201=57;204=59;209=60;212=62;222=64;225=66;237=67;240=69;243=70;254=72;257=74;260=75;261=77;267=79;274=80;277=81;278=84;282=85;</lt>
+			</meth>
+			<meth name="usage" vmsig="()V" flags=' private static' access="10" length="9">
+				<bl s="0" e="8">
+					<methenter s="0" e="8" id="35" count="5"/>
+					<exit s="8" e="8" opcode="return"/>
+				</bl>
+				<lt>0=90;8=91;</lt>
+			</meth>
+		</class>
+		<class name="Replace" supername="java/lang/Object" checksum="2384956339" source="Replace.java" flags=' public'>
+			<meth name="&lt;init&gt;" vmsig="()V" flags=' public' access="1" cons="true" length="49">
+				<bl s="0" e="48">
+					<methenter s="0" e="48" id="36" count="7"/>
+					<exit s="48" e="48" opcode="return"/>
+				</bl>
+				<lt>0=13;4=14;9=15;14=16;19=17;25=18;30=19;36=20;41=26;</lt>
+			</meth>
+			<meth name="replace" vmsig="()V" flags=' public' access="1" length="865">
+				<bl s="0" e="56">
+					<methenter s="0" e="56" id="37" count="2"/>
+					<br s="54" e="56">
+						<cond s="677" e="683" id="38" count="0" val="true"/>
+						<cond s="57" e="63" id="39" count="23" val="false"/>
+					</br>
+				</bl>
+				<bl s="57" e="63">
+					<br s="61" e="63">
+						<cond s="397" e="403" id="40" count="26" val="true"/>
+						<cond s="64" e="70" id="41" count="5" val="false"/>
+					</br>
+				</bl>
+				<bl s="64" e="70">
+					<br s="68" e="70">
+						<cond s="251" e="308" id="42" count="7" val="true"/>
+						<cond s="71" e="162" id="43" count="2" val="false"/>
+					</br>
+				</bl>
+				<bl s="71" e="162">
+					<br s="160" e="162">
+						<cond s="207" e="222" id="44" count="3" val="true"/>
+						<cond s="163" e="178" id="45" count="61" val="false"/>
+					</br>
+				</bl>
+				<bl s="163" e="178">
+					<br s="176" e="178">
+						<cond s="184" e="185" id="46" count="61" val="true"/>
+						<cond s="179" e="183" id="47" count="124" val="false"/>
+					</br>
+				</bl>
+				<bl s="179" e="183">
+					<goto s="181" e="183">
+						<tg s="186" e="206" id="48" count="3"/>
+					</goto>
+				</bl>
+				<bl s="184" e="185">
+				</bl>
+				<bl s="186" e="206">
+					<fall s="186" e="206" id="101" count="90"/>
+					<goto s="204" e="206">
+						<tg s="248" e="250" id="49" count="193"/>
+					</goto>
+				</bl>
+				<bl s="207" e="222">
+					<br s="220" e="222">
+						<cond s="228" e="229" id="50" count="133" val="true"/>
+						<cond s="223" e="227" id="51" count="60" val="false"/>
+					</br>
+				</bl>
+				<bl s="223" e="227">
+					<goto s="225" e="227">
+						<tg s="230" e="247" id="52" count="0"/>
+					</goto>
+				</bl>
+				<bl s="228" e="229">
+				</bl>
+				<bl s="230" e="247">
+					<fall s="230" e="247" id="102" count="90"/>
+				</bl>
+				<bl s="248" e="250">
+					<fall s="248" e="250" id="103" count="11"/>
+					<goto s="248" e="250">
+						<tg s="827" e="847" id="53" count="60"/>
+					</goto>
+				</bl>
+				<bl s="251" e="308">
+					<br s="306" e="308">
+						<cond s="353" e="368" id="54" count="58" val="true"/>
+						<cond s="309" e="324" id="55" count="2" val="false"/>
+					</br>
+				</bl>
+				<bl s="309" e="324">
+					<br s="322" e="324">
+						<cond s="330" e="331" id="56" count="58" val="true"/>
+						<cond s="325" e="329" id="57" count="65" val="false"/>
+					</br>
+				</bl>
+				<bl s="325" e="329">
+					<goto s="327" e="329">
+						<tg s="332" e="352" id="58" count="68"/>
+					</goto>
+				</bl>
+				<bl s="330" e="331">
+				</bl>
+				<bl s="332" e="352">
+					<fall s="332" e="352" id="104" count="11"/>
+					<goto s="350" e="352">
+						<tg s="827" e="847" id="59" count="68"/>
+					</goto>
+				</bl>
+				<bl s="353" e="368">
+					<br s="366" e="368">
+						<cond s="374" e="375" id="60" count="65" val="true"/>
+						<cond s="369" e="373" id="61" count="56" val="false"/>
+					</br>
+				</bl>
+				<bl s="369" e="373">
+					<goto s="371" e="373">
+						<tg s="376" e="396" id="62" count="5"/>
+					</goto>
+				</bl>
+				<bl s="374" e="375">
+				</bl>
+				<bl s="376" e="396">
+					<fall s="376" e="396" id="105" count="7"/>
+					<goto s="394" e="396">
+						<tg s="827" e="847" id="63" count="56"/>
+					</goto>
+				</bl>
+				<bl s="397" e="403">
+					<br s="401" e="403">
+						<cond s="555" e="588" id="64" count="105" val="true"/>
+						<cond s="404" e="466" id="65" count="105" val="false"/>
+					</br>
+				</bl>
+				<bl s="404" e="466">
+					<br s="464" e="466">
+						<cond s="511" e="526" id="66" count="56" val="true"/>
+						<cond s="467" e="482" id="67" count="56" val="false"/>
+					</br>
+				</bl>
+				<bl s="467" e="482">
+					<br s="480" e="482">
+						<cond s="488" e="489" id="68" count="0" val="true"/>
+						<cond s="483" e="487" id="69" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="483" e="487">
+					<goto s="485" e="487">
+						<tg s="490" e="510" id="70" count="66"/>
+					</goto>
+				</bl>
+				<bl s="488" e="489">
+				</bl>
+				<bl s="490" e="510">
+					<fall s="490" e="510" id="106" count="4"/>
+					<goto s="508" e="510">
+						<tg s="552" e="554" id="71" count="0"/>
+					</goto>
+				</bl>
+				<bl s="511" e="526">
+					<br s="524" e="526">
+						<cond s="532" e="533" id="72" count="63" val="true"/>
+						<cond s="527" e="531" id="73" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="527" e="531">
+					<goto s="529" e="531">
+						<tg s="534" e="551" id="74" count="0"/>
+					</goto>
+				</bl>
+				<bl s="532" e="533">
+				</bl>
+				<bl s="534" e="551">
+					<fall s="534" e="551" id="107" count="10"/>
+				</bl>
+				<bl s="552" e="554">
+					<fall s="552" e="554" id="108" count="1"/>
+					<goto s="552" e="554">
+						<tg s="827" e="847" id="75" count="10"/>
+					</goto>
+				</bl>
+				<bl s="555" e="588">
+					<br s="586" e="588">
+						<cond s="633" e="648" id="76" count="359" val="true"/>
+						<cond s="589" e="604" id="77" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="589" e="604">
+					<br s="602" e="604">
+						<cond s="610" e="611" id="78" count="359" val="true"/>
+						<cond s="605" e="609" id="79" count="359" val="false"/>
+					</br>
+				</bl>
+				<bl s="605" e="609">
+					<goto s="607" e="609">
+						<tg s="612" e="632" id="80" count="66"/>
+					</goto>
+				</bl>
+				<bl s="610" e="611">
+				</bl>
+				<bl s="612" e="632">
+					<fall s="612" e="632" id="109" count="4"/>
+					<goto s="630" e="632">
+						<tg s="827" e="847" id="81" count="65"/>
+					</goto>
+				</bl>
+				<bl s="633" e="648">
+					<br s="646" e="648">
+						<cond s="654" e="655" id="82" count="105" val="true"/>
+						<cond s="649" e="653" id="83" count="4" val="false"/>
+					</br>
+				</bl>
+				<bl s="649" e="653">
+					<goto s="651" e="653">
+						<tg s="656" e="676" id="84" count="4"/>
+					</goto>
+				</bl>
+				<bl s="654" e="655">
+				</bl>
+				<bl s="656" e="676">
+					<fall s="656" e="676" id="110" count="7"/>
+					<goto s="674" e="676">
+						<tg s="827" e="847" id="85" count="0"/>
+					</goto>
+				</bl>
+				<bl s="677" e="683">
+					<br s="681" e="683">
+						<cond s="735" e="741" id="86" count="0" val="true"/>
+						<cond s="684" e="734" id="87" count="1" val="false"/>
+					</br>
+				</bl>
+				<bl s="684" e="734">
+				</bl>
+				<bl s="735" e="741">
+					<fall s="735" e="741" id="111" count="0"/>
+					<br s="739" e="741">
+						<cond s="786" e="801" id="88" count="1" val="true"/>
+						<cond s="742" e="757" id="89" count="0" val="false"/>
+					</br>
+				</bl>
+				<bl s="742" e="757">
+					<br s="755" e="757">
+						<cond s="763" e="764" id="90" count="0" val="true"/>
+						<cond s="758" e="762" id="91" count="1" val="false"/>
+					</br>
+				</bl>
+				<bl s="758" e="762">
+					<goto s="760" e="762">
+						<tg s="765" e="785" id="92" count="0"/>
+					</goto>
+				</bl>
+				<bl s="763" e="764">
+				</bl>
+				<bl s="765" e="785">
+					<fall s="765" e="785" id="112" count="7"/>
+					<goto s="783" e="785">
+						<tg s="827" e="847" id="93" count="7"/>
+					</goto>
+				</bl>
+				<bl s="786" e="801">
+					<br s="799" e="801">
+						<cond s="807" e="808" id="94" count="4" val="true"/>
+						<cond s="802" e="806" id="95" count="3" val="false"/>
+					</br>
+				</bl>
+				<bl s="802" e="806">
+					<goto s="804" e="806">
+						<tg s="809" e="826" id="96" count="3"/>
+					</goto>
+				</bl>
+				<bl s="807" e="808">
+				</bl>
+				<bl s="809" e="826">
+					<fall s="809" e="826" id="113" count="11"/>
+				</bl>
+				<bl s="827" e="847">
+					<fall s="827" e="847" id="114" count="4"/>
+					<goto s="845" e="847">
+						<tg s="852" e="855" id="97" count="56"/>
+					</goto>
+				</bl>
+				<bl s="848" e="851">
+					<catch s="848" e="851" id="100" count="14"/>
+				</bl>
+				<bl s="852" e="855">
+					<fall s="852" e="855" id="115" count="7"/>
+					<br s="853" e="855">
+						<cond s="864" e="864" id="98" count="53" val="true"/>
+						<cond s="856" e="863" id="99" count="104" val="false"/>
+					</br>
+				</bl>
+				<bl s="856" e="863">
+				</bl>
+				<bl s="864" e="864">
+					<fall s="864" e="864" id="116" count="7"/>
+					<exit s="864" e="864" opcode="return"/>
+				</bl>
+				<lt>0=30;8=32;20=33;22=37;38=39;44=40;50=43;57=44;64=45;71=46;82=47;156=49;163=50;207=52;248=54;251=56;302=57;309=58;353=60;397=64;404=65;415=66;460=67;467=68;511=70;552=72;555=74;582=75;589=76;633=78;677=86;684=87;695=88;735=90;742=91;786=93;827=98;845=102;848=100;850=101;852=103;856=104;864=105;</lt>
+			</meth>
+			<meth name="isValid" vmsig="()Z" flags=' public' access="1" length="35">
+				<bl s="0" e="6">
+					<methenter s="0" e="6" id="117" count="4"/>
+					<br s="4" e="6">
+						<cond s="31" e="32" id="118" count="11" val="true"/>
+						<cond s="7" e="16" id="119" count="11" val="false"/>
+					</br>
+				</bl>
+				<bl s="7" e="16">
+					<br s="14" e="16">
+						<cond s="31" e="32" id="120" count="0" val="true"/>
+						<cond s="17" e="23" id="121" count="3" val="false"/>
+					</br>
+				</bl>
+				<bl s="17" e="23">
+					<br s="21" e="23">
+						<cond s="31" e="32" id="122" count="56" val="true"/>
+						<cond s="24" e="30" id="123" count="11" val="false"/>
+					</br>
+				</bl>
+				<bl s="24" e="30">
+					<br s="28" e="30">
+						<cond s="33" e="34" id="124" count="4" val="true"/>
+						<cond s="31" e="32" id="125" count="1" val="false"/>
+					</br>
+				</bl>
+				<bl s="31" e="32">
+					<exit s="32" e="32" opcode="ireturn"/>
+				</bl>
+				<bl s="33" e="34">
+					<exit s="34" e="34" opcode="ireturn"/>
+				</bl>
+				<lt>0=110;31=111;33=114;</lt>
+			</meth>
+		</class>
+	</package>
+</coverage>
