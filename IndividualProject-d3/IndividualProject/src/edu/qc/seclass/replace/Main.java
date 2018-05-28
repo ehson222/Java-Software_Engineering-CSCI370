@@ -68,10 +68,12 @@ public class Main {
                 numberArguments++;
             }
 
-
+//            if (args.length < 7) {
+//                //System.err.print("Wrong Arguments");
+//            }
 
         }
-        int numberOfFiles = args.length - fileIndex;
+        //int numberOfFiles = args.length - fileIndex;
 
         if (fileIndex == 0) usage();
 
@@ -271,26 +273,26 @@ public class Main {
 //
 //    }
 //
-    public void replaceLastOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
-
-        String replaceFromString = fromString;
-        String replaceToString = toString;
-
-        String fileContent = getFileContent(fileToConvert.toString());
-
-        String replacedContent = fileContent;
-
-        int lastIndex = fileContent.lastIndexOf(replaceFromString);
-        if (lastIndex >= 0) {
-            replacedContent = fileContent.substring(0, lastIndex) + replaceToString + fileContent.substring(lastIndex + replaceFromString.length());
-        }
-
-        FileWriter newFile = new FileWriter(fileToConvert, false);
-        newFile.write(replacedContent);
-        newFile.close();
-
-
-    }
+//    public void replaceLastOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
+//
+//        String replaceFromString = fromString;
+//        String replaceToString = toString;
+//
+//        String fileContent = getFileContent(fileToConvert.toString());
+//
+//        String replacedContent = fileContent;
+//
+//        int lastIndex = fileContent.lastIndexOf(replaceFromString);
+//        if (lastIndex >= 0) {
+//            replacedContent = fileContent.substring(0, lastIndex) + replaceToString + fileContent.substring(lastIndex + replaceFromString.length());
+//        }
+//
+//        FileWriter newFile = new FileWriter(fileToConvert, false);
+//        newFile.write(replacedContent);
+//        newFile.close();
+//
+//
+//    }
 }
 
 
