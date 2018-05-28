@@ -12,49 +12,167 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 public class Main {
 
-
-
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         // write your code here
 
+        String from = "";
+        String to = "";
+        int fileIndex = 0;
+
         //Replace replace = new Replace();
-        Main newMain = new Main();
+        //Main newMain = new Main();
 
-        System.out.println("Wrong Arguments: " + args.length);
+        //System.out.println("Wrong Arguments: " + args.length);
+
+        boolean first = false;
+        boolean last = false;
+        boolean caseInsensitive = false;
+        boolean backup = false;
+
+        Charset charset = StandardCharsets.UTF_8;
+        int numberArguments = 0;
 
 
-        //the number of arguments before ---
-        for (int i = 0; i < args.length; i++) {
-            if (args.length < 4) {
-                newMain.usage();
-            } else if (args[i].equals("--")) {
+        //get arguments
+        for (int i = 0; i <args.length; i++ ) {
 
-                Replace.numberOfDoubleDash++;
-                Replace.delimiterPosition = i;
-                Replace.trueReplaceOptions = i;
+            if (args[i].equals("--") && (i != 0) ) {
+                fileIndex = i;
+                from = args[i-2];
+                to = args[i-1];
+                numberArguments +=2;
+            }
+            if (args[i].equals("-b") ) {
+                backup = true;
+                numberArguments++;
+            }
+            if (args[i].equals("-i") ) {
+                caseInsensitive = true;
+                numberArguments++;
+            }
 
-                for (int j = i; j < args.length; j++) {
-                    if (args[j].equals("--")) {
-                        Replace.delimiterPosition = j;
+            if (args[i].equals("-f") ) {
+                first = true;
+                numberArguments++;
+            }
+
+            if (args[i].equals("-l") ) {
+                last = true;
+                numberArguments++;
+            }
+
+
+
+        }
+        int numberOfFiles = args.length - fileIndex;
+
+        if (fileIndex == 0) usage();
+
+        else {
+            for (int i = fileIndex; i < args.length; i++) {
+                String content = "";
+                try {
+                    content = new String(Files.readAllBytes(Paths.get(args[i])), charset);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                if (backup) {
+                    try {
+                        FileWriter backupFile = new FileWriter (args[i] + ".bck");
+                        backupFile.write(content);
+                        backupFile.close();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
                     }
                 }
-                break;
-            }
+
+                if (first) {
+                    content = content.replaceFirst(from, to);
+                    try {
+                        FileWriter writer = new FileWriter(args[i]);
+                        writer.write(content);
+                        writer.close();
+                    }
+                    catch(FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                if(last) {
+                    int indexReplace = content.lastIndexOf(from);
+                    if (indexReplace > - 1) {
+                        content = content.substring(0, indexReplace) + to + content.substring(indexReplace + from.length(), content.length());
+                    }
+                    try {
+                        FileWriter writer = new FileWriter(args[i]);
+                        writer.write(content);
+                        writer.close();
+                    }
+                    catch(FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(caseInsensitive) {
+                    content = content.replaceAll("(?i)" + from, to);
+                    try {
+                        FileWriter writer = new FileWriter(args[i]);
+                        writer.write(content);
+                        writer.close();
+                    }
+                    catch(FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if ((first && last && caseInsensitive) == false) {
+                    content = content.replaceAll(from, to);
+                    try {
+                        FileWriter writer = new FileWriter(args[i]);
+                        writer.write(content);
+                        writer.close();
+                    }
+                    catch(FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            } // file
         }
+    } // main
 
-        Replace.numberOfFiles(args);
-        Replace.differentReplacements(args);
-        Replace.optionsCategory(args);
-
-    }
+        //the number of arguments before ---
+//        for (int i = 0; i < args.length; i++) {
+//            if (args.length < 4) {
+//                newMain.usage();
+//            } else if (args[i].equals("--")) {
+//
+//                Replace.numberOfDoubleDash++;
+//                Replace.delimiterPosition = i;
+//                Replace.trueReplaceOptions = i;
+//
+//                for (int j = i; j < args.length; j++) {
+//                    if (args[j].equals("--")) {
+//                        Replace.delimiterPosition = j;
+//                    }
+//                }
+//                break;
+//            }
+//        }
+//
+//        Replace.numberOfFiles(args);
+//        Replace.differentReplacements(args);
+//        Replace.optionsCategory(args);
+//
+//    }
 
     //public TemporaryFolder temporaryFolder = new TemporaryFolder();
-
     public static String usage() {
         System.err.println("Usage: Replace [-b] [-f] [-l] [-i] <from> <to> -- " + "<filename> [<filename>]*");
         return "Usage: Replace [-b] [-f] [-l] [-i] <from> <to> -- " + "<filename> [<filename>]*";
@@ -103,56 +221,56 @@ public class Main {
     /*
      Reference:  http://tutorials.jenkov.com/java-regex/pattern.html
     */
-    public void replaceCaseInsensitive(String fromString, String toString, File fileToConvert) throws IOException {
-        String file = getFileContent(fileToConvert.toString());
-
-        Pattern pattern = Pattern.compile(fromString, Pattern.CASE_INSENSITIVE);
-        Matcher match = pattern.matcher(file);
-
-        String replaceStuff = match.replaceAll(toString);
-
-        FileWriter fileWriter = new FileWriter(fileToConvert, false);
-        fileWriter.write(replaceStuff);
-        fileWriter.close();
-
-    }
-
-    public void firstReplaceForAll(String fromString, String toString, File fileToConvert) throws IOException {
-        String file = getFileContent(fileToConvert.toString());
-
-        fromString = "(?i)" + fromString;
-        String replaceContent = file.replaceFirst(fromString, toString);
-
-        FileWriter fileWriter = new FileWriter(fileToConvert, false);
-        fileWriter.write(replaceContent);
-        fileWriter.close();
-
-    }
-
-
-    public void replaceCaseSensitive(String fromString, String toString, File fileToConvert) throws IOException {
-        String file = getFileContent(fileToConvert.toString());
-
-        String replacedContent = file.replaceAll(fromString, toString);
-
-        FileWriter fileWriter = new FileWriter(fileToConvert, false);
-        fileWriter.write(replacedContent);
-        fileWriter.close();
-
-
-    }
-
-    public void replaceFirstOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
-        String file = getFileContent(fileToConvert.toString());
-
-        String replacedContent = file.replaceAll(fromString, toString);
-
-        FileWriter newFile = new FileWriter(fileToConvert, false);
-        newFile.write(replacedContent);
-        newFile.close();
-
-    }
-
+//    public void replaceCaseInsensitive(String fromString, String toString, File fileToConvert) throws IOException {
+//        String file = getFileContent(fileToConvert.toString());
+//
+//        Pattern pattern = Pattern.compile(fromString, Pattern.CASE_INSENSITIVE);
+//        Matcher match = pattern.matcher(file);
+//
+//        String replaceStuff = match.replaceAll(toString);
+//
+//        FileWriter fileWriter = new FileWriter(fileToConvert, false);
+//        fileWriter.write(replaceStuff);
+//        fileWriter.close();
+//
+//    }
+//
+//    public void firstReplaceForAll(String fromString, String toString, File fileToConvert) throws IOException {
+//        String file = getFileContent(fileToConvert.toString());
+//
+//        fromString = "(?i)" + fromString;
+//        String replaceContent = file.replaceFirst(fromString, toString);
+//
+//        FileWriter fileWriter = new FileWriter(fileToConvert, false);
+//        fileWriter.write(replaceContent);
+//        fileWriter.close();
+//
+//    }
+//
+//
+//    public void replaceCaseSensitive(String fromString, String toString, File fileToConvert) throws IOException {
+//        String file = getFileContent(fileToConvert.toString());
+//
+//        String replacedContent = file.replaceAll(fromString, toString);
+//
+//        FileWriter fileWriter = new FileWriter(fileToConvert, false);
+//        fileWriter.write(replacedContent);
+//        fileWriter.close();
+//
+//
+//    }
+//
+//    public void replaceFirstOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
+//        String file = getFileContent(fileToConvert.toString());
+//
+//        String replacedContent = file.replaceAll(fromString, toString);
+//
+//        FileWriter newFile = new FileWriter(fileToConvert, false);
+//        newFile.write(replacedContent);
+//        newFile.close();
+//
+//    }
+//
     public void replaceLastOccurrence(String fromString, String toString, File fileToConvert) throws IOException {
 
         String replaceFromString = fromString;
