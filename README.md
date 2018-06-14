@@ -7,4 +7,4 @@ QC CS 370 Personal Repository
 * Project 5 - UML preview for Android group project
 * Project 6 - Category Partition
 * Project 7 - White Box Testing
-* Individual Projecct d1, d2, d3 -- Refractoring. JUnit Tests and Agile development- Java Replace Utility 
+* Individual Projecct d1, d2, d3 (Refractoring. JUnit Tests and Agile development) - Java Replace Utility 
